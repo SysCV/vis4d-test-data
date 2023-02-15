@@ -1,0 +1,140 @@
+{
+    "frames": [
+        {
+            "name": "00000100_img_front.jpg",
+            "videoName": "007b-4e72",
+            "intrinsics": {
+                "focal": [
+                    640.0,
+                    640.0
+                ],
+                "center": [
+                    640.0,
+                    400.0
+                ],
+                "skew": 0
+            },
+            "extrinsics": {
+                "location": [
+                    218.8072052001953,
+                    -311.3028564453125,
+                    1.5971183776855469
+                ],
+                "rotation": [
+                    7.432776764882352e-12,
+                    -0.063998870637205,
+                    -179.3130518925883
+                ]
+            },
+            "attributes": {
+                "weather_coarse": "rainy",
+                "timeofday_coarse": "night",
+                "weather_fine": "small rain",
+                "timeofday_fine": "night",
+                "view": "front",
+                "town": "04",
+                "sun_altitude_angle": "-2",
+                "cloudiness": "70.0",
+                "precipitation": "20.0",
+                "precipitation_deposits": "60.0",
+                "wind_intensity": "30.0",
+                "sun_azimuth_angle": "0.0",
+                "fog_density": "3.0",
+                "fog_distance": "0.75",
+                "wetness": "0.0",
+                "fog_falloff": "0.1"
+            },
+            "frameIndex": 100,
+            "labels": [
+                {
+                    "id": "9591",
+                    "attributes": {
+                        "type": "walker.pedestrian.0021"
+                    },
+                    "category": "pedestrian",
+                    "box2d": {
+                        "x1": 609.0,
+                        "y1": 394.0,
+                        "x2": 623.0,
+                        "y2": 444.0
+                    },
+                    "box3d": {
+                        "alpha": 0.0,
+                        "orientation": [
+                            -0.001116000342135104,
+                            -3.0994734911705426,
+                            -4.7032805562116205e-05
+                        ],
+                        "location": [
+                            -0.8999836129495975,
+                            0.6397455437919131,
+                            22.306182652746514
+                        ],
+                        "dimension": [
+                            1.8600000143051147,
+                            0.3753577768802643,
+                            0.3753577768802643
+                        ]
+                    }
+                },
+                {
+                    "id": "9583",
+                    "attributes": {
+                        "type": "walker.pedestrian.0023"
+                    },
+                    "category": "pedestrian",
+                    "box2d": {
+                        "x1": 715.0,
+                        "y1": 394.0,
+                        "x2": 725.0,
+                        "y2": 426.0
+                    },
+                    "box3d": {
+                        "alpha": 0.0,
+                        "orientation": [
+                            -4.8469168925091566e-05,
+                            -1.6142025752915534,
+                            -0.001115938881696849
+                        ],
+                        "location": [
+                            4.446726846398008,
+                            0.5040312286011175,
+                            35.04001545085893
+                        ],
+                        "dimension": [
+                            1.8600000143051147,
+                            0.3753577768802643,
+                            0.3753577768802643
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "config": {
+        "imageSize": {
+            "width": 1280,
+            "height": 800
+        },
+        "categories": [
+            {
+                "name": "pedestrian"
+            },
+            {
+                "name": "car"
+            },
+            {
+                "name": "truck"
+            },
+            {
+                "name": "bus"
+            },
+            {
+                "name": "motorcycle"
+            },
+            {
+                "name": "bicycle"
+            }
+        ]
+    }
+}

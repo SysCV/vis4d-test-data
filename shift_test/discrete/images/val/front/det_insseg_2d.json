@@ -1,0 +1,118 @@
+{
+    "frames": [
+        {
+            "name": "00000100_img_front.jpg",
+            "videoName": "007b-4e72",
+            "intrinsics": {
+                "focal": [
+                    640.0,
+                    640.0
+                ],
+                "center": [
+                    640.0,
+                    400.0
+                ],
+                "skew": 0
+            },
+            "extrinsics": {
+                "location": [
+                    218.8072052001953,
+                    -311.3028564453125,
+                    1.5971183776855469
+                ],
+                "rotation": [
+                    7.432776764882352e-12,
+                    -0.063998870637205,
+                    -179.3130518925883
+                ]
+            },
+            "attributes": {
+                "weather_coarse": "rainy",
+                "timeofday_coarse": "night",
+                "weather_fine": "small rain",
+                "timeofday_fine": "night",
+                "view": "front",
+                "town": "04",
+                "sun_altitude_angle": "-2",
+                "cloudiness": "70.0",
+                "precipitation": "20.0",
+                "precipitation_deposits": "60.0",
+                "wind_intensity": "30.0",
+                "sun_azimuth_angle": "0.0",
+                "fog_density": "3.0",
+                "fog_distance": "0.75",
+                "wetness": "0.0",
+                "fog_falloff": "0.1"
+            },
+            "frameIndex": 100,
+            "labels": [
+                {
+                    "id": "9591",
+                    "attributes": {
+                        "type": "walker.pedestrian.0021"
+                    },
+                    "category": "pedestrian",
+                    "box2d": {
+                        "x1": 609.0,
+                        "y1": 394.0,
+                        "x2": 623.0,
+                        "y2": 444.0
+                    },
+                    "rle": {
+                        "counts": "SVl>2Uh04QXOM30K48JQg06dXO50J077EUg0Y1iXOgNWg0]1dXOdN\\g0`11^OeXO]O[g0EeXOf03[OM2cg0?cXO_OQh02SXOO_h00VWONeh061N3M2MZRP`0",
+                        "size": [
+                            800,
+                            1280
+                        ]
+                    }
+                },
+                {
+                    "id": "9583",
+                    "attributes": {
+                        "type": "walker.pedestrian.0023"
+                    },
+                    "category": "pedestrian",
+                    "box2d": {
+                        "x1": 715.0,
+                        "y1": 394.0,
+                        "x2": 725.0,
+                        "y2": 426.0
+                    },
+                    "rle": {
+                        "counts": "jo^a01hh05YWOKch0837DBgWOf01YOmg0o00FYXO[Ogg0l070M@XXOEjg06R^`=",
+                        "size": [
+                            800,
+                            1280
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "config": {
+        "imageSize": {
+            "width": 1280,
+            "height": 800
+        },
+        "categories": [
+            {
+                "name": "pedestrian"
+            },
+            {
+                "name": "car"
+            },
+            {
+                "name": "truck"
+            },
+            {
+                "name": "bus"
+            },
+            {
+                "name": "motorcycle"
+            },
+            {
+                "name": "bicycle"
+            }
+        ]
+    }
+}

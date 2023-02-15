@@ -1,0 +1,77 @@
+{
+    "frames": [
+        {
+            "name": "00000100_img_left_90.jpg",
+            "videoName": "007b-4e72",
+            "intrinsics": {
+                "focal": [
+                    640.0,
+                    640.0
+                ],
+                "center": [
+                    640.0,
+                    400.0
+                ],
+                "skew": 0
+            },
+            "extrinsics": {
+                "location": [
+                    219.3011932373047,
+                    -310.796875,
+                    1.596560001373291
+                ],
+                "rotation": [
+                    0.06399884396620184,
+                    9.645095682631744e-10,
+                    90.68692236460997
+                ]
+            },
+            "attributes": {
+                "weather_coarse": "rainy",
+                "timeofday_coarse": "night",
+                "weather_fine": "small rain",
+                "timeofday_fine": "night",
+                "view": "left_90",
+                "town": "04",
+                "sun_altitude_angle": "-2",
+                "cloudiness": "70.0",
+                "precipitation": "20.0",
+                "precipitation_deposits": "60.0",
+                "wind_intensity": "30.0",
+                "sun_azimuth_angle": "0.0",
+                "fog_density": "3.0",
+                "fog_distance": "0.75",
+                "wetness": "0.0",
+                "fog_falloff": "0.1"
+            },
+            "frameIndex": 100,
+            "labels": []
+        }
+    ],
+    "config": {
+        "imageSize": {
+            "width": 1280,
+            "height": 800
+        },
+        "categories": [
+            {
+                "name": "pedestrian"
+            },
+            {
+                "name": "car"
+            },
+            {
+                "name": "truck"
+            },
+            {
+                "name": "bus"
+            },
+            {
+                "name": "motorcycle"
+            },
+            {
+                "name": "bicycle"
+            }
+        ]
+    }
+}
