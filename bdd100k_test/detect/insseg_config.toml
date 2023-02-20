@@ -1,38 +1,54 @@
-[imageSize]
-height = 720
-width = 1280
+remove_ignored = false
+ignored_as_class = false
 
-[[attributes]]
-name = "crowd"
-type = "switch"
-tag = "c"
+[ignored_mapping]
+"other person" = "pedestrian"
+"other vehicle" = "car"
+"trailer" = "truck"
 
-[[categories]]
-name = "human"
-    [[categories.subcategories]]
-    name = "pedestrian"
+[name_mapping]
+bike = "bicycle"
+caravan = "car"
+motor = "motorcycle"
+person = "pedestrian"
+van = "car"
 
-    [[categories.subcategories]]
-    name = "rider"
+[scalabel]
+    [scalabel.imageSize]
+    height = 720
+    width = 1280
 
-[[categories]]
-name = "vehicle"
-   [[categories.subcategories]]
-    name = "car"
+    [[scalabel.attributes]]
+    name = "crowd"
+    type = "switch"
+    tag = "c"
 
-   [[categories.subcategories]]
-    name = "truck"
+    [[scalabel.categories]]
+    name = "human"
+        [[scalabel.categories.subcategories]]
+        name = "pedestrian"
 
-   [[categories.subcategories]]
-    name = "bus"
+        [[scalabel.categories.subcategories]]
+        name = "rider"
 
-    [[categories.subcategories]]
-    name = "train"
+    [[scalabel.categories]]
+    name = "vehicle"
+        [[scalabel.categories.subcategories]]
+            name = "car"
 
-[[categories]]
-name = "bike"
-    [[categories.subcategories]]
-    name = "motorcycle"
+        [[scalabel.categories.subcategories]]
+            name = "truck"
 
-    [[categories.subcategories]]
-    name = "bicycle"
+        [[scalabel.categories.subcategories]]
+            name = "bus"
+
+        [[scalabel.categories.subcategories]]
+        name = "train"
+
+    [[scalabel.categories]]
+    name = "bike"
+        [[scalabel.categories.subcategories]]
+        name = "motorcycle"
+
+        [[scalabel.categories.subcategories]]
+        name = "bicycle"
