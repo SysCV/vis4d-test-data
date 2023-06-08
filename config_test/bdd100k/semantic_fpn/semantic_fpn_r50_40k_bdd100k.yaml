@@ -1,0 +1,705 @@
+!!python/object:ml_collections.config_dict.config_dict.ConfigDict
+_convert_dict: true
+_fields:
+  callbacks:
+  - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+    _convert_dict: true
+    _fields:
+      class_path: vis4d.engine.callbacks.logging.LoggingCallback
+      init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+        _convert_dict: true
+        _fields:
+          epoch_based: false
+          refresh_rate: 50
+        _locked: false
+        _type_safe: true
+    _locked: false
+    _type_safe: true
+  - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+    _convert_dict: true
+    _fields:
+      class_path: vis4d.engine.callbacks.evaluator.EvaluatorCallback
+      init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+        _convert_dict: true
+        _fields:
+          evaluator: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+            _convert_dict: true
+            _fields:
+              class_path: vis4d.eval.bdd100k.seg.BDD100KSegEvaluator
+              init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                _convert_dict: true
+                _fields:
+                  annotation_path: data/bdd100k/labels/sem_seg_val_rle.json
+                _locked: false
+                _type_safe: true
+            _locked: false
+            _type_safe: true
+          test_connector: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+            _convert_dict: true
+            _fields:
+              class_path: vis4d.engine.connectors.base.CallbackConnector
+              init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                _convert_dict: true
+                _fields:
+                  key_mapping: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                    _convert_dict: true
+                    _fields:
+                      data_names: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                        _convert_dict: true
+                        _fields:
+                          key: sample_names
+                          source: data
+                        _locked: false
+                        _type_safe: true
+                      masks_list: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                        _convert_dict: true
+                        _fields:
+                          key: masks
+                          source: prediction
+                        _locked: false
+                        _type_safe: true
+                    _locked: false
+                    _type_safe: true
+                _locked: false
+                _type_safe: true
+            _locked: false
+            _type_safe: true
+        _locked: false
+        _type_safe: true
+    _locked: false
+    _type_safe: true
+  - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+    _convert_dict: true
+    _fields:
+      class_path: vis4d.engine.callbacks.visualizer.VisualizerCallback
+      init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+        _convert_dict: true
+        _fields:
+          save_prefix: vis4d-workspace/semantic_fpn_r50_40k_bdd100k/2023-06-08_18-00-41
+          test_connector: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+            _convert_dict: true
+            _fields:
+              class_path: vis4d.engine.connectors.base.CallbackConnector
+              init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                _convert_dict: true
+                _fields:
+                  key_mapping: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                    _convert_dict: true
+                    _fields:
+                      image_names: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                        _convert_dict: true
+                        _fields:
+                          key: sample_names
+                          source: data
+                        _locked: false
+                        _type_safe: true
+                      images: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                        _convert_dict: true
+                        _fields:
+                          key: images
+                          source: data
+                        _locked: false
+                        _type_safe: true
+                      masks: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                        _convert_dict: true
+                        _fields:
+                          key: masks
+                          source: prediction
+                        _locked: false
+                        _type_safe: true
+                    _locked: false
+                    _type_safe: true
+                _locked: false
+                _type_safe: true
+            _locked: false
+            _type_safe: true
+          visualizer: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+            _convert_dict: true
+            _fields:
+              class_path: vis4d.vis.image.seg_mask_visualizer.SegMaskVisualizer
+              init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                _convert_dict: true
+                _fields:
+                  vis_freq: 20
+                _locked: false
+                _type_safe: true
+            _locked: false
+            _type_safe: true
+        _locked: false
+        _type_safe: true
+    _locked: false
+    _type_safe: true
+  check_val_every_n_epoch: null
+  data: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+    _convert_dict: true
+    _fields:
+      test_dataloader: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+        _convert_dict: true
+        _fields:
+          class_path: vis4d.data.loader.build_inference_dataloaders
+          init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+            _convert_dict: true
+            _fields:
+              batchprocess_fn: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                _convert_dict: true
+                _fields:
+                  class_path: vis4d.data.transforms.base.compose_batch
+                  init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                    _convert_dict: true
+                    _fields:
+                      transforms:
+                      - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                        _convert_dict: true
+                        _fields:
+                          class_path: vis4d.data.transforms.pad.PadImages
+                          init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                            _convert_dict: true
+                            _fields:
+                              shape: !!python/tuple
+                              - 720
+                              - 1280
+                            _locked: false
+                            _type_safe: true
+                        _locked: false
+                        _type_safe: true
+                      - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                        _convert_dict: true
+                        _fields:
+                          class_path: vis4d.data.transforms.pad.PadSegMasks
+                          init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                            _convert_dict: true
+                            _fields:
+                              shape: !!python/tuple
+                              - 720
+                              - 1280
+                            _locked: false
+                            _type_safe: true
+                        _locked: false
+                        _type_safe: true
+                      - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                        _convert_dict: true
+                        _fields:
+                          class_path: vis4d.data.transforms.to_tensor.ToTensor
+                        _locked: false
+                        _type_safe: true
+                    _locked: false
+                    _type_safe: true
+                _locked: false
+                _type_safe: true
+              collate_fn: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                _convert_dict: true
+                _fields:
+                  class_path: vis4d.config.config_dict.DelayedInstantiator
+                  init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                    _convert_dict: true
+                    _fields:
+                      instantiable: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                        _convert_dict: true
+                        _fields:
+                          _class_path: vis4d.data.loader.default_collate
+                        _locked: false
+                        _type_safe: true
+                    _locked: false
+                    _type_safe: true
+                _locked: false
+                _type_safe: true
+              datasets: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                _convert_dict: true
+                _fields:
+                  class_path: vis4d.data.loader.DataPipe
+                  init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                    _convert_dict: true
+                    _fields:
+                      datasets: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                        _convert_dict: true
+                        _fields:
+                          class_path: vis4d.data.datasets.bdd100k.BDD100K
+                          init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                            _convert_dict: true
+                            _fields:
+                              annotation_path: data/bdd100k/labels/sem_seg_val_rle.json
+                              config_path: sem_seg
+                              data_backend: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                                _convert_dict: true
+                                _fields:
+                                  class_path: vis4d.data.io.hdf5.HDF5Backend
+                                _locked: false
+                                _type_safe: true
+                              data_root: data/bdd100k/images/10k/val
+                              keys_to_load: !!python/tuple
+                              - images
+                              - seg_masks
+                            _locked: false
+                            _type_safe: true
+                        _locked: false
+                        _type_safe: true
+                      preprocess_fn: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                        _convert_dict: true
+                        _fields:
+                          class_path: vis4d.data.transforms.base.compose
+                          init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                            _convert_dict: true
+                            _fields:
+                              transforms:
+                              - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                                _convert_dict: true
+                                _fields:
+                                  class_path: vis4d.data.transforms.resize.GenerateResizeParameters
+                                  init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                                    _convert_dict: true
+                                    _fields:
+                                      keep_ratio: true
+                                      shape: !!python/tuple
+                                      - 720
+                                      - 1280
+                                    _locked: false
+                                    _type_safe: true
+                                _locked: false
+                                _type_safe: true
+                              - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                                _convert_dict: true
+                                _fields:
+                                  class_path: vis4d.data.transforms.resize.ResizeImage
+                                _locked: false
+                                _type_safe: true
+                              - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                                _convert_dict: true
+                                _fields:
+                                  class_path: vis4d.data.transforms.resize.ResizeSegMasks
+                                _locked: false
+                                _type_safe: true
+                              - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                                _convert_dict: true
+                                _fields:
+                                  class_path: vis4d.data.transforms.normalize.NormalizeImage
+                                _locked: false
+                                _type_safe: true
+                            _locked: false
+                            _type_safe: true
+                        _locked: false
+                        _type_safe: true
+                    _locked: false
+                    _type_safe: true
+                _locked: false
+                _type_safe: true
+              samples_per_gpu: 1
+              video_based_inference: false
+              workers_per_gpu: 2
+            _locked: false
+            _type_safe: true
+        _locked: false
+        _type_safe: true
+      train_dataloader: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+        _convert_dict: true
+        _fields:
+          class_path: vis4d.data.loader.build_train_dataloader
+          init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+            _convert_dict: true
+            _fields:
+              batchprocess_fn: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                _convert_dict: true
+                _fields:
+                  class_path: vis4d.data.transforms.base.compose_batch
+                  init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                    _convert_dict: true
+                    _fields:
+                      transforms:
+                      - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                        _convert_dict: true
+                        _fields:
+                          class_path: vis4d.data.transforms.pad.PadImages
+                          init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                            _convert_dict: true
+                            _fields:
+                              shape: !!python/tuple
+                              - 512
+                              - 1024
+                            _locked: false
+                            _type_safe: true
+                        _locked: false
+                        _type_safe: true
+                      - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                        _convert_dict: true
+                        _fields:
+                          class_path: vis4d.data.transforms.pad.PadSegMasks
+                          init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                            _convert_dict: true
+                            _fields:
+                              shape: !!python/tuple
+                              - 512
+                              - 1024
+                            _locked: false
+                            _type_safe: true
+                        _locked: false
+                        _type_safe: true
+                      - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                        _convert_dict: true
+                        _fields:
+                          class_path: vis4d.data.transforms.to_tensor.ToTensor
+                        _locked: false
+                        _type_safe: true
+                    _locked: false
+                    _type_safe: true
+                _locked: false
+                _type_safe: true
+              collate_fn: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                _convert_dict: true
+                _fields:
+                  class_path: vis4d.config.config_dict.DelayedInstantiator
+                  init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                    _convert_dict: true
+                    _fields:
+                      instantiable: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                        _convert_dict: true
+                        _fields:
+                          _class_path: vis4d.data.loader.default_collate
+                        _locked: false
+                        _type_safe: true
+                    _locked: false
+                    _type_safe: true
+                _locked: false
+                _type_safe: true
+              dataset: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                _convert_dict: true
+                _fields:
+                  class_path: vis4d.data.loader.DataPipe
+                  init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                    _convert_dict: true
+                    _fields:
+                      datasets: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                        _convert_dict: true
+                        _fields:
+                          class_path: vis4d.data.datasets.bdd100k.BDD100K
+                          init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                            _convert_dict: true
+                            _fields:
+                              annotation_path: data/bdd100k/labels/sem_seg_train_rle.json
+                              config_path: sem_seg
+                              data_backend: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                                _convert_dict: true
+                                _fields:
+                                  class_path: vis4d.data.io.hdf5.HDF5Backend
+                                _locked: false
+                                _type_safe: true
+                              data_root: data/bdd100k/images/10k/train
+                              keys_to_load: !!python/tuple
+                              - images
+                              - seg_masks
+                            _locked: false
+                            _type_safe: true
+                        _locked: false
+                        _type_safe: true
+                      preprocess_fn: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                        _convert_dict: true
+                        _fields:
+                          class_path: vis4d.data.transforms.base.compose
+                          init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                            _convert_dict: true
+                            _fields:
+                              transforms:
+                              - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                                _convert_dict: true
+                                _fields:
+                                  class_path: vis4d.data.transforms.crop.GenCropParameters
+                                  init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                                    _convert_dict: true
+                                    _fields:
+                                      cat_max_ratio: 0.75
+                                      shape: !!python/tuple
+                                      - 512
+                                      - 1024
+                                    _locked: false
+                                    _type_safe: true
+                                _locked: false
+                                _type_safe: true
+                              - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                                _convert_dict: true
+                                _fields:
+                                  class_path: vis4d.data.transforms.crop.CropImage
+                                _locked: false
+                                _type_safe: true
+                              - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                                _convert_dict: true
+                                _fields:
+                                  class_path: vis4d.data.transforms.crop.CropSegMasks
+                                _locked: false
+                                _type_safe: true
+                              - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                                _convert_dict: true
+                                _fields:
+                                  class_path: vis4d.data.transforms.base.RandomApply
+                                  init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                                    _convert_dict: true
+                                    _fields:
+                                      probability: 0.5
+                                      transforms:
+                                      - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                                        _convert_dict: true
+                                        _fields:
+                                          class_path: vis4d.data.transforms.flip.FlipImage
+                                        _locked: false
+                                        _type_safe: true
+                                      - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                                        _convert_dict: true
+                                        _fields:
+                                          class_path: vis4d.data.transforms.flip.FlipSegMasks
+                                        _locked: false
+                                        _type_safe: true
+                                    _locked: false
+                                    _type_safe: true
+                                _locked: false
+                                _type_safe: true
+                              - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                                _convert_dict: true
+                                _fields:
+                                  class_path: vis4d.data.transforms.base.RandomApply
+                                  init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                                    _convert_dict: true
+                                    _fields:
+                                      probability: 0.5
+                                      transforms:
+                                      - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                                        _convert_dict: true
+                                        _fields:
+                                          class_path: vis4d.data.transforms.photometric.ColorJitter
+                                        _locked: false
+                                        _type_safe: true
+                                    _locked: false
+                                    _type_safe: true
+                                _locked: false
+                                _type_safe: true
+                              - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                                _convert_dict: true
+                                _fields:
+                                  class_path: vis4d.data.transforms.normalize.NormalizeImage
+                                _locked: false
+                                _type_safe: true
+                            _locked: false
+                            _type_safe: true
+                        _locked: false
+                        _type_safe: true
+                    _locked: false
+                    _type_safe: true
+                _locked: false
+                _type_safe: true
+              pin_memory: true
+              samples_per_gpu: 2
+              shuffle: true
+              workers_per_gpu: 2
+            _locked: false
+            _type_safe: true
+        _locked: false
+        _type_safe: true
+    _locked: false
+    _type_safe: true
+  experiment_name: semantic_fpn_r50_40k_bdd100k
+  loss: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+    _convert_dict: true
+    _fields:
+      class_path: vis4d.engine.loss_module.LossModule
+      init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+        _convert_dict: true
+        _fields:
+          losses:
+          - connector: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+              _convert_dict: true
+              _fields:
+                class_path: vis4d.engine.connectors.base.LossConnector
+                init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                  _convert_dict: true
+                  _fields:
+                    key_mapping: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                      _convert_dict: true
+                      _fields:
+                        output: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                          _convert_dict: true
+                          _fields:
+                            key: outputs
+                            source: prediction
+                          _locked: false
+                          _type_safe: true
+                        target: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                          _convert_dict: true
+                          _fields:
+                            key: seg_masks
+                            source: data
+                          _locked: false
+                          _type_safe: true
+                      _locked: false
+                      _type_safe: true
+                  _locked: false
+                  _type_safe: true
+              _locked: false
+              _type_safe: true
+            loss: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+              _convert_dict: true
+              _fields:
+                class_path: vis4d.op.loss.seg_cross_entropy_loss.SegCrossEntropyLoss
+              _locked: false
+              _type_safe: true
+        _locked: false
+        _type_safe: true
+    _locked: false
+    _type_safe: true
+  model: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+    _convert_dict: true
+    _fields:
+      class_path: vis4d.model.seg.semantic_fpn.SemanticFPN
+      init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+        _convert_dict: true
+        _fields:
+          num_classes: 19
+        _locked: false
+        _type_safe: true
+    _locked: false
+    _type_safe: true
+  optimizers:
+  - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+    _convert_dict: true
+    _fields:
+      epoch_based_lr: false
+      epoch_based_warmup: false
+      lr_scheduler: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+        _convert_dict: true
+        _fields:
+          class_path: vis4d.engine.optim.scheduler.PolyLR
+          init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+            _convert_dict: true
+            _fields:
+              max_steps: 40000
+              min_lr: 0.0001
+              power: 0.9
+            _locked: false
+            _type_safe: true
+        _locked: false
+        _type_safe: true
+      lr_warmup: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+        _convert_dict: true
+        _fields:
+          class_path: vis4d.engine.optim.warmup.LinearLRWarmup
+          init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+            _convert_dict: true
+            _fields:
+              warmup_ratio: 0.001
+              warmup_steps: 500
+            _locked: false
+            _type_safe: true
+        _locked: false
+        _type_safe: true
+      optimizer: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+        _convert_dict: true
+        _fields:
+          class_path: torch.optim.sgd.SGD
+          init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+            _convert_dict: true
+            _fields:
+              lr: 0.01
+              momentum: 0.9
+              weight_decay: 0.0005
+            _locked: false
+            _type_safe: true
+        _locked: false
+        _type_safe: true
+    _locked: false
+    _type_safe: true
+  output_dir: vis4d-workspace/semantic_fpn_r50_40k_bdd100k/2023-06-08_18-00-41
+  params: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+    _convert_dict: true
+    _fields:
+      lr: 0.01
+      num_classes: 19
+      num_steps: 40000
+      samples_per_gpu: 2
+      workers_per_gpu: 2
+    _locked: false
+    _type_safe: true
+  pl_callbacks: []
+  pl_trainer: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+    _convert_dict: true
+    _fields:
+      accelerator: auto
+      accumulate_grad_batches: 1
+      barebones: false
+      benchmark: null
+      check_val_every_n_epoch: null
+      checkpoint_period: 2000
+      default_root_dir: null
+      detect_anomaly: false
+      deterministic: null
+      enable_checkpointing: null
+      enable_model_summary: null
+      enable_progress_bar: false
+      epoch_based: false
+      exp_name: semantic_fpn_r50_40k_bdd100k
+      fast_dev_run: false
+      find_unused_parameters: false
+      gradient_clip_algorithm: null
+      gradient_clip_val: null
+      inference_mode: true
+      limit_predict_batches: null
+      limit_test_batches: null
+      limit_train_batches: null
+      limit_val_batches: null
+      log_every_n_steps: null
+      max_epochs: null
+      max_steps: 40000
+      max_time: null
+      min_epochs: null
+      min_steps: null
+      num_nodes: 1
+      num_sanity_val_steps: 0
+      overfit_batches: 0.0
+      plugins: null
+      precision: 32-true
+      profiler: null
+      reload_dataloaders_every_n_epochs: 0
+      sync_batchnorm: true
+      use_distributed_sampler: false
+      val_check_interval: 2000
+      version: 2023-06-08_18-00-41
+      wandb: false
+      work_dir: vis4d-workspace
+    _locked: false
+    _type_safe: true
+  sync_batchnorm: true
+  test_data_connector: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+    _convert_dict: true
+    _fields:
+      class_path: vis4d.engine.connectors.base.DataConnector
+      init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+        _convert_dict: true
+        _fields:
+          key_mapping: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+            _convert_dict: true
+            _fields:
+              images: images
+              original_hw: original_hw
+            _locked: false
+            _type_safe: true
+        _locked: false
+        _type_safe: true
+    _locked: false
+    _type_safe: true
+  timestamp: 2023-06-08_18-00-41
+  train_data_connector: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+    _convert_dict: true
+    _fields:
+      class_path: vis4d.engine.connectors.base.DataConnector
+      init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+        _convert_dict: true
+        _fields:
+          key_mapping: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+            _convert_dict: true
+            _fields:
+              images: images
+            _locked: false
+            _type_safe: true
+        _locked: false
+        _type_safe: true
+    _locked: false
+    _type_safe: true
+  val_check_interval: 2000
+  version: 2023-06-08_18-00-41
+  work_dir: vis4d-workspace
+_locked: false
+_type_safe: true
