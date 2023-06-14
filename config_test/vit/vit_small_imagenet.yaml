@@ -21,7 +21,7 @@ _fields:
       init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
         _convert_dict: true
         _fields:
-          save_prefix: vis4d-workspace/vit_small_16_imagenet1k/2023-06-14_03-09-36
+          save_prefix: vis4d-workspace/vit_small_16_imagenet1k/2023-06-14_11-57-57
         _locked: false
         _type_safe: true
     _locked: false
@@ -37,12 +37,6 @@ _fields:
             _convert_dict: true
             _fields:
               class_path: vis4d.eval.common.cls.ClassificationEvaluator
-              init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
-                _convert_dict: true
-                _fields:
-                  num_classes: 1000
-                _locked: false
-                _type_safe: true
             _locked: false
             _type_safe: true
           metrics_to_eval:
@@ -57,14 +51,14 @@ _fields:
                   key_mapping: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                     _convert_dict: true
                     _fields:
-                      groundtruths: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                      groundtruth: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                         _convert_dict: true
                         _fields:
                           key: categories
                           source: data
                         _locked: false
                         _type_safe: true
-                      predictions: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                      prediction: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                         _convert_dict: true
                         _fields:
                           key: probs
@@ -577,7 +571,7 @@ _fields:
         _type_safe: true
     _locked: false
     _type_safe: true
-  output_dir: vis4d-workspace/vit_small_16_imagenet1k/2023-06-14_03-09-36
+  output_dir: vis4d-workspace/vit_small_16_imagenet1k/2023-06-14_11-57-57
   params: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
     _convert_dict: true
     _fields:
@@ -633,7 +627,7 @@ _fields:
       sync_batchnorm: false
       use_distributed_sampler: false
       val_check_interval: null
-      version: 2023-06-14_03-09-36
+      version: 2023-06-14_11-57-57
       wandb: false
       work_dir: vis4d-workspace
     _locked: false
@@ -656,7 +650,7 @@ _fields:
         _type_safe: true
     _locked: false
     _type_safe: true
-  timestamp: 2023-06-14_03-09-36
+  timestamp: 2023-06-14_11-57-57
   train_data_connector: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
     _convert_dict: true
     _fields:
@@ -674,7 +668,7 @@ _fields:
         _type_safe: true
     _locked: false
     _type_safe: true
-  version: 2023-06-14_03-09-36
+  version: 2023-06-14_11-57-57
   work_dir: vis4d-workspace
 _locked: false
 _type_safe: true
