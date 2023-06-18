@@ -250,7 +250,7 @@ _fields:
                           init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                             _convert_dict: true
                             _fields:
-                              annotation_path: data/bdd100k/labels/det_20/det_val_coco.json
+                              annotation_path: data/bdd100k/labels/det_20/det_val.json
                               config_path: det
                               data_backend: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                                 _convert_dict: true
@@ -379,7 +379,7 @@ _fields:
                           init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                             _convert_dict: true
                             _fields:
-                              annotation_path: data/bdd100k/labels/det_20/det_train_coco.json
+                              annotation_path: data/bdd100k/labels/det_20/det_train.json
                               config_path: det
                               data_backend: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                                 _convert_dict: true
