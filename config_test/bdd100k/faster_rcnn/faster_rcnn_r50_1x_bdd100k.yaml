@@ -551,7 +551,7 @@ _fields:
                     anchor_generator: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                       _convert_dict: true
                       _fields:
-                        class_path: vis4d.op.detect.anchor_generator.AnchorGenerator
+                        class_path: vis4d.op.box.anchor.anchor_generator.AnchorGenerator
                         init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                           _convert_dict: true
                           _fields:
@@ -722,7 +722,7 @@ _fields:
                   anchor_generator: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                     _convert_dict: true
                     _fields:
-                      class_path: vis4d.op.detect.anchor_generator.AnchorGenerator
+                      class_path: vis4d.op.box.anchor.anchor_generator.AnchorGenerator
                       init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                         _convert_dict: true
                         _fields:
