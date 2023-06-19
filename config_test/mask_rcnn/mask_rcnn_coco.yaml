@@ -21,7 +21,7 @@ _fields:
       init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
         _convert_dict: true
         _fields:
-          save_prefix: vis4d-workspace/mask_rcnn_r50_fpn_coco/2023-06-08_18-28-30
+          save_prefix: vis4d-workspace/mask_rcnn_r50_fpn_coco/2023-06-16_15-41-05
         _locked: false
         _type_safe: true
     _locked: false
@@ -33,7 +33,7 @@ _fields:
       init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
         _convert_dict: true
         _fields:
-          save_prefix: vis4d-workspace/mask_rcnn_r50_fpn_coco/2023-06-08_18-28-30
+          save_prefix: vis4d-workspace/mask_rcnn_r50_fpn_coco/2023-06-16_15-41-05
           test_connector: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
             _convert_dict: true
             _fields:
@@ -184,7 +184,7 @@ _fields:
               batchprocess_fn: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                 _convert_dict: true
                 _fields:
-                  class_path: vis4d.data.transforms.base.compose_batch
+                  class_path: vis4d.data.transforms.base.compose
                   init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                     _convert_dict: true
                     _fields:
@@ -225,7 +225,7 @@ _fields:
               datasets: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                 _convert_dict: true
                 _fields:
-                  class_path: vis4d.data.loader.DataPipe
+                  class_path: vis4d.data.data_pipe.DataPipe
                   init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                     _convert_dict: true
                     _fields:
@@ -236,6 +236,8 @@ _fields:
                           init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                             _convert_dict: true
                             _fields:
+                              cache_as_binary: true
+                              cached_file_path: data/coco/val.pkl
                               data_backend: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                                 _convert_dict: true
                                 _fields:
@@ -281,7 +283,7 @@ _fields:
                               - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                                 _convert_dict: true
                                 _fields:
-                                  class_path: vis4d.data.transforms.resize.ResizeImage
+                                  class_path: vis4d.data.transforms.resize.ResizeImages
                                 _locked: false
                                 _type_safe: true
                               - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
@@ -293,7 +295,7 @@ _fields:
                               - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                                 _convert_dict: true
                                 _fields:
-                                  class_path: vis4d.data.transforms.normalize.NormalizeImage
+                                  class_path: vis4d.data.transforms.normalize.NormalizeImages
                                 _locked: false
                                 _type_safe: true
                             _locked: false
@@ -321,7 +323,7 @@ _fields:
               batchprocess_fn: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                 _convert_dict: true
                 _fields:
-                  class_path: vis4d.data.transforms.base.compose_batch
+                  class_path: vis4d.data.transforms.base.compose
                   init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                     _convert_dict: true
                     _fields:
@@ -362,7 +364,7 @@ _fields:
               dataset: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                 _convert_dict: true
                 _fields:
-                  class_path: vis4d.data.loader.DataPipe
+                  class_path: vis4d.data.data_pipe.DataPipe
                   init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                     _convert_dict: true
                     _fields:
@@ -373,6 +375,8 @@ _fields:
                           init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                             _convert_dict: true
                             _fields:
+                              cache_as_binary: true
+                              cached_file_path: data/coco/train.pkl
                               data_backend: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                                 _convert_dict: true
                                 _fields:
@@ -418,7 +422,7 @@ _fields:
                               - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                                 _convert_dict: true
                                 _fields:
-                                  class_path: vis4d.data.transforms.resize.ResizeImage
+                                  class_path: vis4d.data.transforms.resize.ResizeImages
                                 _locked: false
                                 _type_safe: true
                               - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
@@ -445,7 +449,7 @@ _fields:
                                       - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                                         _convert_dict: true
                                         _fields:
-                                          class_path: vis4d.data.transforms.flip.FlipImage
+                                          class_path: vis4d.data.transforms.flip.FlipImages
                                         _locked: false
                                         _type_safe: true
                                       - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
@@ -467,7 +471,7 @@ _fields:
                               - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                                 _convert_dict: true
                                 _fields:
-                                  class_path: vis4d.data.transforms.normalize.NormalizeImage
+                                  class_path: vis4d.data.transforms.normalize.NormalizeImages
                                 _locked: false
                                 _type_safe: true
                             _locked: false
@@ -989,7 +993,7 @@ _fields:
         _type_safe: true
     _locked: false
     _type_safe: true
-  output_dir: vis4d-workspace/mask_rcnn_r50_fpn_coco/2023-06-08_18-28-30
+  output_dir: vis4d-workspace/mask_rcnn_r50_fpn_coco/2023-06-16_15-41-05
   params: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
     _convert_dict: true
     _fields:
@@ -1042,7 +1046,7 @@ _fields:
       sync_batchnorm: false
       use_distributed_sampler: false
       val_check_interval: null
-      version: 2023-06-08_18-28-30
+      version: 2023-06-16_15-41-05
       wandb: false
       work_dir: vis4d-workspace
     _locked: false
@@ -1066,7 +1070,7 @@ _fields:
         _type_safe: true
     _locked: false
     _type_safe: true
-  timestamp: 2023-06-08_18-28-30
+  timestamp: 2023-06-16_15-41-05
   train_data_connector: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
     _convert_dict: true
     _fields:
@@ -1087,7 +1091,7 @@ _fields:
         _type_safe: true
     _locked: false
     _type_safe: true
-  version: 2023-06-08_18-28-30
+  version: 2023-06-16_15-41-05
   work_dir: vis4d-workspace
 _locked: false
 _type_safe: true

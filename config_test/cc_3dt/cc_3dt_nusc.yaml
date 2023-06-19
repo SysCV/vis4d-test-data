@@ -21,7 +21,7 @@ _fields:
       init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
         _convert_dict: true
         _fields:
-          save_prefix: vis4d-workspace/cc_3dt_r50_kf3d/2023-06-08_17-39-45
+          save_prefix: vis4d-workspace/cc_3dt_r50_kf3d/2023-06-16_15-19-11
         _locked: false
         _type_safe: true
     _locked: false
@@ -40,7 +40,7 @@ _fields:
             _locked: false
             _type_safe: true
           save_predictions: true
-          save_prefix: vis4d-workspace/cc_3dt_r50_kf3d/2023-06-08_17-39-45
+          save_prefix: vis4d-workspace/cc_3dt_r50_kf3d/2023-06-16_15-19-11
           test_connector: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
             _convert_dict: true
             _fields:
@@ -116,7 +116,7 @@ _fields:
               batchprocess_fn: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                 _convert_dict: true
                 _fields:
-                  class_path: vis4d.data.transforms.base.compose_batch
+                  class_path: vis4d.data.transforms.base.compose
                   init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                     _convert_dict: true
                     _fields:
@@ -142,7 +142,7 @@ _fields:
                       - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                         _convert_dict: true
                         _fields:
-                          class_path: vis4d.data.transforms.normalize.BatchNormalizeImages
+                          class_path: vis4d.data.transforms.normalize.NormalizeImages
                           init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                             _convert_dict: true
                             _fields:
@@ -199,7 +199,7 @@ _fields:
               datasets: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                 _convert_dict: true
                 _fields:
-                  class_path: vis4d.data.loader.VideoDataPipe
+                  class_path: vis4d.data.data_pipe.DataPipe
                   init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                     _convert_dict: true
                     _fields:
@@ -210,6 +210,8 @@ _fields:
                           init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                             _convert_dict: true
                             _fields:
+                              cache_as_binary: true
+                              cached_file_path: data/nuscenes/mini_val.pkl
                               data_backend: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                                 _convert_dict: true
                                 _fields:
@@ -217,8 +219,10 @@ _fields:
                                 _locked: false
                                 _type_safe: true
                               data_root: data/nuscenes
-                              metadata:
-                              - use_camera
+                              keys_to_load:
+                              - images
+                              - original_images
+                              - boxes3d
                               split: mini_val
                               version: v1.0-mini
                             _locked: false
@@ -258,7 +262,7 @@ _fields:
                               - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                                 _convert_dict: true
                                 _fields:
-                                  class_path: vis4d.data.transforms.resize.ResizeImage
+                                  class_path: vis4d.data.transforms.resize.ResizeImages
                                   init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                                     _convert_dict: true
                                     _fields:
@@ -301,7 +305,7 @@ _fields:
                 _type_safe: true
               samples_per_gpu: 1
               video_based_inference: true
-              workers_per_gpu: 1
+              workers_per_gpu: 2
             _locked: false
             _type_safe: true
         _locked: false
@@ -385,14 +389,14 @@ _fields:
         _type_safe: true
     _locked: false
     _type_safe: true
-  output_dir: vis4d-workspace/cc_3dt_r50_kf3d/2023-06-08_17-39-45
+  output_dir: vis4d-workspace/cc_3dt_r50_kf3d/2023-06-16_15-19-11
   params: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
     _convert_dict: true
     _fields:
       lr: 0.01
       num_epochs: 12
       samples_per_gpu: 4
-      workers_per_gpu: 4
+      workers_per_gpu: 2
     _locked: false
     _type_safe: true
   pl_callbacks: []
@@ -437,7 +441,7 @@ _fields:
       sync_batchnorm: false
       use_distributed_sampler: false
       val_check_interval: null
-      version: 2023-06-08_17-39-45
+      version: 2023-06-16_15-19-11
       wandb: false
       work_dir: vis4d-workspace
     _locked: false
@@ -470,9 +474,9 @@ _fields:
         _type_safe: true
     _locked: false
     _type_safe: true
-  timestamp: 2023-06-08_17-39-45
+  timestamp: 2023-06-16_15-19-11
   train_data_connector: null
-  version: 2023-06-08_17-39-45
+  version: 2023-06-16_15-19-11
   work_dir: vis4d-workspace
 _locked: false
 _type_safe: true
