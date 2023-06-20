@@ -21,7 +21,7 @@ _fields:
       init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
         _convert_dict: true
         _fields:
-          save_prefix: vis4d-workspace/qdtrack_frcnn_r50_fpn_bdd100k/2023-06-16_16-09-07
+          save_prefix: vis4d-workspace/qdtrack_frcnn_r50_fpn_bdd100k/2023-06-20_14-42-26
         _locked: false
         _type_safe: true
     _locked: false
@@ -55,27 +55,6 @@ _fields:
                   key_mapping: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                     _convert_dict: true
                     _fields:
-                      boxes_list: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
-                        _convert_dict: true
-                        _fields:
-                          key: boxes
-                          source: prediction
-                        _locked: false
-                        _type_safe: true
-                      class_ids_list: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
-                        _convert_dict: true
-                        _fields:
-                          key: class_ids
-                          source: prediction
-                        _locked: false
-                        _type_safe: true
-                      data_names: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
-                        _convert_dict: true
-                        _fields:
-                          key: sample_names
-                          source: data
-                        _locked: false
-                        _type_safe: true
                       frame_ids: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                         _convert_dict: true
                         _fields:
@@ -83,21 +62,42 @@ _fields:
                           source: data
                         _locked: false
                         _type_safe: true
-                      scores_list: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                      pred_boxes: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                        _convert_dict: true
+                        _fields:
+                          key: boxes
+                          source: prediction
+                        _locked: false
+                        _type_safe: true
+                      pred_classes: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                        _convert_dict: true
+                        _fields:
+                          key: class_ids
+                          source: prediction
+                        _locked: false
+                        _type_safe: true
+                      pred_scores: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                         _convert_dict: true
                         _fields:
                           key: scores
                           source: prediction
                         _locked: false
                         _type_safe: true
-                      track_ids_list: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                      pred_track_ids: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                         _convert_dict: true
                         _fields:
                           key: track_ids
                           source: prediction
                         _locked: false
                         _type_safe: true
-                      video_names: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                      sample_names: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                        _convert_dict: true
+                        _fields:
+                          key: sample_names
+                          source: data
+                        _locked: false
+                        _type_safe: true
+                      sequence_names: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                         _convert_dict: true
                         _fields:
                           key: sequence_names
@@ -253,9 +253,9 @@ _fields:
                     _type_safe: true
                 _locked: false
                 _type_safe: true
-              samples_per_gpu: 2
+              samples_per_gpu: 1
               video_based_inference: true
-              workers_per_gpu: 2
+              workers_per_gpu: 1
             _locked: false
             _type_safe: true
         _locked: false
@@ -595,7 +595,7 @@ _fields:
                     anchor_generator: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                       _convert_dict: true
                       _fields:
-                        class_path: vis4d.op.detect.anchor_generator.AnchorGenerator
+                        class_path: vis4d.op.box.anchor.anchor_generator.AnchorGenerator
                         init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                           _convert_dict: true
                           _fields:
@@ -887,7 +887,7 @@ _fields:
         _type_safe: true
     _locked: false
     _type_safe: true
-  output_dir: vis4d-workspace/qdtrack_frcnn_r50_fpn_bdd100k/2023-06-16_16-09-07
+  output_dir: vis4d-workspace/qdtrack_frcnn_r50_fpn_bdd100k/2023-06-20_14-42-26
   params: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
     _convert_dict: true
     _fields:
@@ -939,7 +939,7 @@ _fields:
       sync_batchnorm: false
       use_distributed_sampler: false
       val_check_interval: null
-      version: 2023-06-16_16-09-07
+      version: 2023-06-20_14-42-26
       wandb: false
       work_dir: vis4d-workspace
     _locked: false
@@ -963,11 +963,11 @@ _fields:
         _type_safe: true
     _locked: false
     _type_safe: true
-  timestamp: 2023-06-16_16-09-07
+  timestamp: 2023-06-20_14-42-26
   train_data_connector: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
     _convert_dict: true
     _fields:
-      class_path: vis4d.engine.connectors.reference.RefDataConnector
+      class_path: vis4d.engine.connectors.base.DataConnector
       init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
         _convert_dict: true
         _fields:
@@ -987,7 +987,7 @@ _fields:
         _type_safe: true
     _locked: false
     _type_safe: true
-  version: 2023-06-16_16-09-07
+  version: 2023-06-20_14-42-26
   work_dir: vis4d-workspace
 _locked: false
 _type_safe: true

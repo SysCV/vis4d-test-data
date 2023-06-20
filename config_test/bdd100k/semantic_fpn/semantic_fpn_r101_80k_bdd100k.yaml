@@ -75,7 +75,7 @@ _fields:
       init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
         _convert_dict: true
         _fields:
-          save_prefix: vis4d-workspace/semantic_fpn_r101_80k_bdd100k/2023-06-16_16-36-47
+          save_prefix: vis4d-workspace/semantic_fpn_r101_80k_bdd100k/2023-06-20_14-48-49
           test_connector: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
             _convert_dict: true
             _fields:
@@ -617,7 +617,7 @@ _fields:
         _type_safe: true
     _locked: false
     _type_safe: true
-  output_dir: vis4d-workspace/semantic_fpn_r101_80k_bdd100k/2023-06-16_16-36-47
+  output_dir: vis4d-workspace/semantic_fpn_r101_80k_bdd100k/2023-06-20_14-48-49
   params: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
     _convert_dict: true
     _fields:
@@ -671,7 +671,7 @@ _fields:
       sync_batchnorm: true
       use_distributed_sampler: false
       val_check_interval: 4000
-      version: 2023-06-16_16-36-47
+      version: 2023-06-20_14-48-49
       wandb: false
       work_dir: vis4d-workspace
     _locked: false
@@ -695,7 +695,7 @@ _fields:
         _type_safe: true
     _locked: false
     _type_safe: true
-  timestamp: 2023-06-16_16-36-47
+  timestamp: 2023-06-20_14-48-49
   train_data_connector: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
     _convert_dict: true
     _fields:
@@ -714,7 +714,7 @@ _fields:
     _locked: false
     _type_safe: true
   val_check_interval: 4000
-  version: 2023-06-16_16-36-47
+  version: 2023-06-20_14-48-49
   work_dir: vis4d-workspace
 _locked: false
 _type_safe: true
