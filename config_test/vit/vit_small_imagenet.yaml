@@ -21,7 +21,7 @@ _fields:
       init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
         _convert_dict: true
         _fields:
-          save_prefix: vis4d-workspace/vit_small_16_imagenet1k/2023-06-14_11-57-57
+          save_prefix: vis4d-workspace/vit_small_16_imagenet1k/2023-06-27_16-42-19
         _locked: false
         _type_safe: true
     _locked: false
@@ -89,7 +89,7 @@ _fields:
               batchprocess_fn: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                 _convert_dict: true
                 _fields:
-                  class_path: vis4d.data.transforms.base.compose_batch
+                  class_path: vis4d.data.transforms.base.compose
                   init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                     _convert_dict: true
                     _fields:
@@ -158,7 +158,7 @@ _fields:
               dataset: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                 _convert_dict: true
                 _fields:
-                  class_path: vis4d.data.loader.DataPipe
+                  class_path: vis4d.data.data_pipe.DataPipe
                   init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                     _convert_dict: true
                     _fields:
@@ -206,7 +206,7 @@ _fields:
                               - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                                 _convert_dict: true
                                 _fields:
-                                  class_path: vis4d.data.transforms.resize.ResizeImage
+                                  class_path: vis4d.data.transforms.resize.ResizeImages
                                 _locked: false
                                 _type_safe: true
                               - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
@@ -227,13 +227,13 @@ _fields:
                               - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                                 _convert_dict: true
                                 _fields:
-                                  class_path: vis4d.data.transforms.crop.CropImage
+                                  class_path: vis4d.data.transforms.crop.CropImages
                                 _locked: false
                                 _type_safe: true
                               - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                                 _convert_dict: true
                                 _fields:
-                                  class_path: vis4d.data.transforms.normalize.NormalizeImage
+                                  class_path: vis4d.data.transforms.normalize.NormalizeImages
                                 _locked: false
                                 _type_safe: true
                             _locked: false
@@ -262,7 +262,7 @@ _fields:
               batchprocess_fn: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                 _convert_dict: true
                 _fields:
-                  class_path: vis4d.data.transforms.base.compose_batch
+                  class_path: vis4d.data.transforms.base.compose
                   init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                     _convert_dict: true
                     _fields:
@@ -331,7 +331,7 @@ _fields:
               dataset: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                 _convert_dict: true
                 _fields:
-                  class_path: vis4d.data.loader.DataPipe
+                  class_path: vis4d.data.data_pipe.DataPipe
                   init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                     _convert_dict: true
                     _fields:
@@ -372,7 +372,7 @@ _fields:
                                       - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                                         _convert_dict: true
                                         _fields:
-                                          class_path: vis4d.data.transforms.flip.FlipImage
+                                          class_path: vis4d.data.transforms.flip.FlipImages
                                         _locked: false
                                         _type_safe: true
                                     _locked: false
@@ -388,7 +388,7 @@ _fields:
                               - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                                 _convert_dict: true
                                 _fields:
-                                  class_path: vis4d.data.transforms.crop.CropImage
+                                  class_path: vis4d.data.transforms.crop.CropImages
                                 _locked: false
                                 _type_safe: true
                               - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
@@ -409,7 +409,7 @@ _fields:
                               - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                                 _convert_dict: true
                                 _fields:
-                                  class_path: vis4d.data.transforms.resize.ResizeImage
+                                  class_path: vis4d.data.transforms.resize.ResizeImages
                                 _locked: false
                                 _type_safe: true
                               - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
@@ -434,7 +434,7 @@ _fields:
                               - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                                 _convert_dict: true
                                 _fields:
-                                  class_path: vis4d.data.transforms.normalize.NormalizeImage
+                                  class_path: vis4d.data.transforms.normalize.NormalizeImages
                                 _locked: false
                                 _type_safe: true
                             _locked: false
@@ -512,14 +512,25 @@ _fields:
   model: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
     _convert_dict: true
     _fields:
-      class_path: vis4d.model.cls.vit.ViTClassifer
+      class_path: vis4d.engine.util.ModelEMAAdapter
       init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
         _convert_dict: true
         _fields:
-          drop_path_rate: 0.1
-          drop_rate: 0.1
-          num_classes: 1000
-          variant: vit_small_patch16_224
+          model: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+            _convert_dict: true
+            _fields:
+              class_path: vis4d.model.cls.vit.ViTClassifer
+              init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                _convert_dict: true
+                _fields:
+                  drop_path_rate: 0.1
+                  drop_rate: 0.1
+                  num_classes: 1000
+                  variant: vit_small_patch16_224
+                _locked: false
+                _type_safe: true
+            _locked: false
+            _type_safe: true
         _locked: false
         _type_safe: true
     _locked: false
@@ -571,7 +582,7 @@ _fields:
         _type_safe: true
     _locked: false
     _type_safe: true
-  output_dir: vis4d-workspace/vit_small_16_imagenet1k/2023-06-14_11-57-57
+  output_dir: vis4d-workspace/vit_small_16_imagenet1k/2023-06-27_16-42-19
   params: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
     _convert_dict: true
     _fields:
@@ -627,7 +638,7 @@ _fields:
       sync_batchnorm: false
       use_distributed_sampler: false
       val_check_interval: null
-      version: 2023-06-14_11-57-57
+      version: 2023-06-27_16-42-19
       wandb: false
       work_dir: vis4d-workspace
     _locked: false
@@ -650,7 +661,7 @@ _fields:
         _type_safe: true
     _locked: false
     _type_safe: true
-  timestamp: 2023-06-14_11-57-57
+  timestamp: 2023-06-27_16-42-19
   train_data_connector: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
     _convert_dict: true
     _fields:
@@ -668,7 +679,7 @@ _fields:
         _type_safe: true
     _locked: false
     _type_safe: true
-  version: 2023-06-14_11-57-57
+  version: 2023-06-27_16-42-19
   work_dir: vis4d-workspace
 _locked: false
 _type_safe: true
