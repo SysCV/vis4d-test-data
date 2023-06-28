@@ -1,6 +1,7 @@
 !!python/object:ml_collections.config_dict.config_dict.ConfigDict
 _convert_dict: true
 _fields:
+  benchmark: false
   callbacks:
   - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
     _convert_dict: true
@@ -21,7 +22,7 @@ _fields:
       init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
         _convert_dict: true
         _fields:
-          save_prefix: vis4d-workspace/vit_tiny_16_imagenet1k/2023-06-27_22-22-27
+          save_prefix: vis4d-workspace/vit_tiny_16_imagenet1k/2023-06-28_10-49-23
         _locked: false
         _type_safe: true
     _locked: false
@@ -456,6 +457,7 @@ _fields:
     _locked: false
     _type_safe: true
   experiment_name: vit_tiny_16_imagenet1k
+  log_every_n_steps: 50
   loss: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
     _convert_dict: true
     _fields:
@@ -539,30 +541,45 @@ _fields:
   - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
     _convert_dict: true
     _fields:
-      epoch_based_lr: true
-      epoch_based_warmup: true
-      lr_scheduler: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+      lr_schedulers:
+      - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
         _convert_dict: true
         _fields:
-          class_path: torch.optim.lr_scheduler.CosineAnnealingLR
-          init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+          begin: 0
+          end: 9
+          epoch_based: true
+          scheduler: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
             _convert_dict: true
             _fields:
-              T_max: 300
-              eta_min: 1.0e-09
+              class_path: torch.optim.lr_scheduler.LinearLR
+              init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                _convert_dict: true
+                _fields:
+                  estart_factor: 0.001
+                  total_iters: 10
+                _locked: false
+                _type_safe: true
             _locked: false
             _type_safe: true
         _locked: false
         _type_safe: true
-      lr_warmup: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+      - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
         _convert_dict: true
         _fields:
-          class_path: vis4d.engine.optim.warmup.LinearLRWarmup
-          init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+          begin: 10
+          end: -1
+          epoch_based: true
+          scheduler: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
             _convert_dict: true
             _fields:
-              warmup_ratio: 0.001
-              warmup_steps: 10
+              class_path: torch.optim.lr_scheduler.CosineAnnealingLR
+              init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                _convert_dict: true
+                _fields:
+                  T_max: 300
+                  eta_min: 1.0e-09
+                _locked: false
+                _type_safe: true
             _locked: false
             _type_safe: true
         _locked: false
@@ -580,9 +597,10 @@ _fields:
             _type_safe: true
         _locked: false
         _type_safe: true
+      param_groups: null
     _locked: false
     _type_safe: true
-  output_dir: vis4d-workspace/vit_tiny_16_imagenet1k/2023-06-27_22-22-27
+  output_dir: vis4d-workspace/vit_tiny_16_imagenet1k/2023-06-28_10-49-23
   params: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
     _convert_dict: true
     _fields:
@@ -603,7 +621,7 @@ _fields:
       accelerator: auto
       accumulate_grad_batches: 1
       barebones: false
-      benchmark: null
+      benchmark: false
       check_val_every_n_epoch: 1
       checkpoint_period: 1
       default_root_dir: null
@@ -622,7 +640,7 @@ _fields:
       limit_test_batches: null
       limit_train_batches: null
       limit_val_batches: null
-      log_every_n_steps: null
+      log_every_n_steps: 50
       max_epochs: 300
       max_steps: -1
       max_time: null
@@ -638,11 +656,12 @@ _fields:
       sync_batchnorm: false
       use_distributed_sampler: false
       val_check_interval: null
-      version: 2023-06-27_22-22-27
+      version: 2023-06-28_10-49-23
       wandb: false
       work_dir: vis4d-workspace
     _locked: false
     _type_safe: true
+  seed: -1
   sync_batchnorm: true
   test_data_connector: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
     _convert_dict: true
@@ -661,7 +680,7 @@ _fields:
         _type_safe: true
     _locked: false
     _type_safe: true
-  timestamp: 2023-06-27_22-22-27
+  timestamp: 2023-06-28_10-49-23
   train_data_connector: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
     _convert_dict: true
     _fields:
@@ -679,8 +698,9 @@ _fields:
         _type_safe: true
     _locked: false
     _type_safe: true
-  use_ema_model_for_test: true
-  version: 2023-06-27_22-22-27
+  use_ema: true
+  use_tf32: false
+  version: 2023-06-28_10-49-23
   work_dir: vis4d-workspace
 _locked: false
 _type_safe: true

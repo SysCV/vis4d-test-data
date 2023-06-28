@@ -1,6 +1,7 @@
 !!python/object:ml_collections.config_dict.config_dict.ConfigDict
 _convert_dict: true
 _fields:
+  benchmark: false
   callbacks:
   - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
     _convert_dict: true
@@ -21,7 +22,7 @@ _fields:
       init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
         _convert_dict: true
         _fields:
-          save_prefix: vis4d-workspace/mask_rcnn_r50_fpn_coco/2023-06-18_14-11-13
+          save_prefix: vis4d-workspace/mask_rcnn_r50_fpn_coco/2023-06-28_10-44-45
         _locked: false
         _type_safe: true
     _locked: false
@@ -33,7 +34,7 @@ _fields:
       init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
         _convert_dict: true
         _fields:
-          save_prefix: vis4d-workspace/mask_rcnn_r50_fpn_coco/2023-06-18_14-11-13
+          save_prefix: vis4d-workspace/mask_rcnn_r50_fpn_coco/2023-06-28_10-44-45
           test_connector: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
             _convert_dict: true
             _fields:
@@ -493,6 +494,7 @@ _fields:
     _locked: false
     _type_safe: true
   experiment_name: mask_rcnn_r50_fpn_coco
+  log_every_n_steps: 50
   loss: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
     _convert_dict: true
     _fields:
@@ -949,32 +951,47 @@ _fields:
   - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
     _convert_dict: true
     _fields:
-      epoch_based_lr: true
-      epoch_based_warmup: false
-      lr_scheduler: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+      lr_schedulers:
+      - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
         _convert_dict: true
         _fields:
-          class_path: torch.optim.lr_scheduler.MultiStepLR
-          init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+          begin: 0
+          end: 500
+          epoch_based: false
+          scheduler: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
             _convert_dict: true
             _fields:
-              gamma: 0.1
-              milestones:
-              - 8
-              - 11
+              class_path: torch.optim.lr_scheduler.LinearLR
+              init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                _convert_dict: true
+                _fields:
+                  start_factor: 0.001
+                  total_iters: 500
+                _locked: false
+                _type_safe: true
             _locked: false
             _type_safe: true
         _locked: false
         _type_safe: true
-      lr_warmup: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+      - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
         _convert_dict: true
         _fields:
-          class_path: vis4d.engine.optim.warmup.LinearLRWarmup
-          init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+          begin: 0
+          end: -1
+          epoch_based: true
+          scheduler: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
             _convert_dict: true
             _fields:
-              warmup_ratio: 0.001
-              warmup_steps: 500
+              class_path: torch.optim.lr_scheduler.MultiStepLR
+              init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                _convert_dict: true
+                _fields:
+                  gamma: 0.1
+                  milestones:
+                  - 8
+                  - 11
+                _locked: false
+                _type_safe: true
             _locked: false
             _type_safe: true
         _locked: false
@@ -993,9 +1010,10 @@ _fields:
             _type_safe: true
         _locked: false
         _type_safe: true
+      param_groups: null
     _locked: false
     _type_safe: true
-  output_dir: vis4d-workspace/mask_rcnn_r50_fpn_coco/2023-06-18_14-11-13
+  output_dir: vis4d-workspace/mask_rcnn_r50_fpn_coco/2023-06-28_10-44-45
   params: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
     _convert_dict: true
     _fields:
@@ -1013,7 +1031,7 @@ _fields:
       accelerator: auto
       accumulate_grad_batches: 1
       barebones: false
-      benchmark: null
+      benchmark: false
       check_val_every_n_epoch: 1
       checkpoint_period: 1
       default_root_dir: null
@@ -1032,7 +1050,7 @@ _fields:
       limit_test_batches: null
       limit_train_batches: null
       limit_val_batches: null
-      log_every_n_steps: null
+      log_every_n_steps: 50
       max_epochs: 12
       max_steps: -1
       max_time: null
@@ -1048,11 +1066,12 @@ _fields:
       sync_batchnorm: false
       use_distributed_sampler: false
       val_check_interval: null
-      version: 2023-06-18_14-11-13
+      version: 2023-06-28_10-44-45
       wandb: false
       work_dir: vis4d-workspace
     _locked: false
     _type_safe: true
+  seed: -1
   test_data_connector: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
     _convert_dict: true
     _fields:
@@ -1072,7 +1091,7 @@ _fields:
         _type_safe: true
     _locked: false
     _type_safe: true
-  timestamp: 2023-06-18_14-11-13
+  timestamp: 2023-06-28_10-44-45
   train_data_connector: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
     _convert_dict: true
     _fields:
@@ -1093,7 +1112,9 @@ _fields:
         _type_safe: true
     _locked: false
     _type_safe: true
-  version: 2023-06-18_14-11-13
+  use_ema: true
+  use_tf32: false
+  version: 2023-06-28_10-44-45
   work_dir: vis4d-workspace
 _locked: false
 _type_safe: true
