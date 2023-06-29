@@ -10,6 +10,7 @@ _fields:
       init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
         _convert_dict: true
         _fields:
+          epoch_based: true
           refresh_rate: 50
         _locked: false
         _type_safe: true
@@ -22,7 +23,9 @@ _fields:
       init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
         _convert_dict: true
         _fields:
-          save_prefix: vis4d-workspace/vit_small_16_imagenet1k/2023-06-28_13-30-47
+          checkpoint_period: 1
+          epoch_based: true
+          save_prefix: vis4d-workspace/vit_small_16_imagenet1k/2023-06-29_15-10-11
         _locked: false
         _type_safe: true
     _locked: false
@@ -600,7 +603,7 @@ _fields:
       param_groups: null
     _locked: false
     _type_safe: true
-  output_dir: vis4d-workspace/vit_small_16_imagenet1k/2023-06-28_13-30-47
+  output_dir: vis4d-workspace/vit_small_16_imagenet1k/2023-06-29_15-10-11
   params: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
     _convert_dict: true
     _fields:
@@ -656,7 +659,7 @@ _fields:
       sync_batchnorm: false
       use_distributed_sampler: false
       val_check_interval: null
-      version: 2023-06-28_13-30-47
+      version: 2023-06-29_15-10-11
       wandb: false
       work_dir: vis4d-workspace
     _locked: false
@@ -680,7 +683,7 @@ _fields:
         _type_safe: true
     _locked: false
     _type_safe: true
-  timestamp: 2023-06-28_13-30-47
+  timestamp: 2023-06-29_15-10-11
   train_data_connector: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
     _convert_dict: true
     _fields:
@@ -700,7 +703,7 @@ _fields:
     _type_safe: true
   use_ema: true
   use_tf32: false
-  version: 2023-06-28_13-30-47
+  version: 2023-06-29_15-10-11
   work_dir: vis4d-workspace
 _locked: false
 _type_safe: true
