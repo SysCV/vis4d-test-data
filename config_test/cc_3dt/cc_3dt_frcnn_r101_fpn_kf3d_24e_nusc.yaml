@@ -25,7 +25,7 @@ _fields:
         _fields:
           checkpoint_period: 1
           epoch_based: true
-          save_prefix: vis4d-workspace/cc_3dt_frcnn_r101_fpn_kf3d_24e_nusc/2023-07-13_14-05-05
+          save_prefix: vis4d-workspace/cc_3dt_frcnn_r101_fpn_kf3d_24e_nusc/2023-07-14_17-26-02
         _locked: false
         _type_safe: true
     _locked: false
@@ -52,7 +52,7 @@ _fields:
             _locked: false
             _type_safe: true
           save_predictions: true
-          save_prefix: vis4d-workspace/cc_3dt_frcnn_r101_fpn_kf3d_24e_nusc/2023-07-13_14-05-05
+          save_prefix: vis4d-workspace/cc_3dt_frcnn_r101_fpn_kf3d_24e_nusc/2023-07-14_17-26-02
           test_connector: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
             _convert_dict: true
             _fields:
@@ -129,7 +129,7 @@ _fields:
             _locked: false
             _type_safe: true
           save_predictions: true
-          save_prefix: vis4d-workspace/cc_3dt_frcnn_r101_fpn_kf3d_24e_nusc/2023-07-13_14-05-05
+          save_prefix: vis4d-workspace/cc_3dt_frcnn_r101_fpn_kf3d_24e_nusc/2023-07-14_17-26-02
           test_connector: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
             _convert_dict: true
             _fields:
@@ -1069,7 +1069,6 @@ _fields:
                 _type_safe: true
             _locked: false
             _type_safe: true
-          weights: null
         _locked: false
         _type_safe: true
     _locked: false
@@ -1166,7 +1165,7 @@ _fields:
         lr_mult: 10.0
     _locked: false
     _type_safe: true
-  output_dir: vis4d-workspace/cc_3dt_frcnn_r101_fpn_kf3d_24e_nusc/2023-07-13_14-05-05
+  output_dir: vis4d-workspace/cc_3dt_frcnn_r101_fpn_kf3d_24e_nusc/2023-07-14_17-26-02
   params: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
     _convert_dict: true
     _fields:
@@ -1218,7 +1217,7 @@ _fields:
       sync_batchnorm: false
       use_distributed_sampler: false
       val_check_interval: null
-      version: 2023-07-13_14-05-05
+      version: 2023-07-14_17-26-02
       wandb: false
       work_dir: vis4d-workspace
     _locked: false
@@ -1252,7 +1251,7 @@ _fields:
         _type_safe: true
     _locked: false
     _type_safe: true
-  timestamp: 2023-07-13_14-05-05
+  timestamp: 2023-07-14_17-26-02
   train_data_connector: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
     _convert_dict: true
     _fields:
@@ -1279,7 +1278,7 @@ _fields:
     _type_safe: true
   use_ema: true
   use_tf32: false
-  version: 2023-07-13_14-05-05
+  version: 2023-07-14_17-26-02
   work_dir: vis4d-workspace
 _locked: false
 _type_safe: true
