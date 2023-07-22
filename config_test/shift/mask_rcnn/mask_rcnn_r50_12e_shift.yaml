@@ -25,7 +25,7 @@ _fields:
         _fields:
           checkpoint_period: 1
           epoch_based: true
-          save_prefix: vis4d-workspace/mask_rcnn_r50_12e_shift/2023-07-04_17-53-26
+          save_prefix: vis4d-workspace/mask_rcnn_r50_12e_shift/2023-07-23_01-26-56
         _locked: false
         _type_safe: true
     _locked: false
@@ -37,7 +37,7 @@ _fields:
       init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
         _convert_dict: true
         _fields:
-          save_prefix: vis4d-workspace/mask_rcnn_r50_12e_shift/2023-07-04_17-53-26
+          save_prefix: vis4d-workspace/mask_rcnn_r50_12e_shift/2023-07-23_01-26-56
           test_connector: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
             _convert_dict: true
             _fields:
@@ -1066,7 +1066,7 @@ _fields:
       param_groups: null
     _locked: false
     _type_safe: true
-  output_dir: vis4d-workspace/mask_rcnn_r50_12e_shift/2023-07-04_17-53-26
+  output_dir: vis4d-workspace/mask_rcnn_r50_12e_shift/2023-07-23_01-26-56
   params: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
     _convert_dict: true
     _fields:
@@ -1119,7 +1119,7 @@ _fields:
       sync_batchnorm: false
       use_distributed_sampler: false
       val_check_interval: null
-      version: 2023-07-04_17-53-26
+      version: 2023-07-23_01-26-56
       wandb: false
       work_dir: vis4d-workspace
     _locked: false
@@ -1144,7 +1144,7 @@ _fields:
         _type_safe: true
     _locked: false
     _type_safe: true
-  timestamp: 2023-07-04_17-53-26
+  timestamp: 2023-07-23_01-26-56
   train_data_connector: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
     _convert_dict: true
     _fields:
@@ -1167,7 +1167,7 @@ _fields:
     _type_safe: true
   use_ema: true
   use_tf32: false
-  version: 2023-07-04_17-53-26
+  version: 2023-07-23_01-26-56
   work_dir: vis4d-workspace
 _locked: false
 _type_safe: true

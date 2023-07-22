@@ -25,9 +25,15 @@ _fields:
         _fields:
           checkpoint_period: 1
           epoch_based: true
-          save_prefix: vis4d-workspace/vit_tiny_16_imagenet1k/2023-06-29_15-10-12
+          save_prefix: vis4d-workspace/vit_tiny_16_imagenet1k/2023-07-23_01-26-52
         _locked: false
         _type_safe: true
+    _locked: false
+    _type_safe: true
+  - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+    _convert_dict: true
+    _fields:
+      class_path: vis4d.engine.callbacks.ema.EMACallback
     _locked: false
     _type_safe: true
   - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
@@ -194,7 +200,7 @@ _fields:
                               - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                                 _convert_dict: true
                                 _fields:
-                                  class_path: vis4d.data.transforms.resize.GenerateResizeParameters
+                                  class_path: vis4d.data.transforms.resize.GenResizeParameters
                                   init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                                     _convert_dict: true
                                     _fields:
@@ -398,7 +404,7 @@ _fields:
                               - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                                 _convert_dict: true
                                 _fields:
-                                  class_path: vis4d.data.transforms.resize.GenerateResizeParameters
+                                  class_path: vis4d.data.transforms.resize.GenResizeParameters
                                   init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                                     _convert_dict: true
                                     _fields:
@@ -516,7 +522,7 @@ _fields:
   model: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
     _convert_dict: true
     _fields:
-      class_path: vis4d.engine.util.ModelEMAAdapter
+      class_path: vis4d.model.adapter.ema.ModelEMAAdapter
       init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
         _convert_dict: true
         _fields:
@@ -603,7 +609,7 @@ _fields:
       param_groups: null
     _locked: false
     _type_safe: true
-  output_dir: vis4d-workspace/vit_tiny_16_imagenet1k/2023-06-29_15-10-12
+  output_dir: vis4d-workspace/vit_tiny_16_imagenet1k/2023-07-23_01-26-52
   params: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
     _convert_dict: true
     _fields:
@@ -659,7 +665,7 @@ _fields:
       sync_batchnorm: false
       use_distributed_sampler: false
       val_check_interval: null
-      version: 2023-06-29_15-10-12
+      version: 2023-07-23_01-26-52
       wandb: false
       work_dir: vis4d-workspace
     _locked: false
@@ -683,7 +689,7 @@ _fields:
         _type_safe: true
     _locked: false
     _type_safe: true
-  timestamp: 2023-06-29_15-10-12
+  timestamp: 2023-07-23_01-26-52
   train_data_connector: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
     _convert_dict: true
     _fields:
@@ -703,7 +709,7 @@ _fields:
     _type_safe: true
   use_ema: true
   use_tf32: false
-  version: 2023-06-29_15-10-12
+  version: 2023-07-23_01-26-52
   work_dir: vis4d-workspace
 _locked: false
 _type_safe: true
