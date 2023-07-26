@@ -25,7 +25,7 @@ _fields:
         _fields:
           checkpoint_period: 1
           epoch_based: true
-          save_prefix: vis4d-workspace/velo_lstm_frcnn_r101_fpn_100e_nusc/2023-07-24_15-47-53
+          save_prefix: vis4d-workspace/velo_lstm_frcnn_r101_fpn_100e_nusc/2023-07-26_23-10-25
         _locked: false
         _type_safe: true
     _locked: false
@@ -216,7 +216,7 @@ _fields:
       param_groups: null
     _locked: false
     _type_safe: true
-  output_dir: vis4d-workspace/velo_lstm_frcnn_r101_fpn_100e_nusc/2023-07-24_15-47-53
+  output_dir: vis4d-workspace/velo_lstm_frcnn_r101_fpn_100e_nusc/2023-07-26_23-10-25
   params: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
     _convert_dict: true
     _fields:
@@ -269,14 +269,14 @@ _fields:
       sync_batchnorm: false
       use_distributed_sampler: false
       val_check_interval: null
-      version: 2023-07-24_15-47-53
+      version: 2023-07-26_23-10-25
       wandb: false
       work_dir: vis4d-workspace
     _locked: false
     _type_safe: true
   seed: -1
   test_data_connector: null
-  timestamp: 2023-07-24_15-47-53
+  timestamp: 2023-07-26_23-10-25
   train_data_connector: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
     _convert_dict: true
     _fields:
@@ -294,9 +294,8 @@ _fields:
         _type_safe: true
     _locked: false
     _type_safe: true
-  use_ema: true
   use_tf32: false
-  version: 2023-07-24_15-47-53
+  version: 2023-07-26_23-10-25
   work_dir: vis4d-workspace
 _locked: false
 _type_safe: true
