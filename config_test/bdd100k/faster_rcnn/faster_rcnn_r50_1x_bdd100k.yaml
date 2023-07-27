@@ -25,7 +25,7 @@ _fields:
         _fields:
           checkpoint_period: 1
           epoch_based: true
-          save_prefix: vis4d-workspace/faster_rcnn_r50_1x_bdd100k/2023-07-26_23-10-29
+          save_prefix: vis4d-workspace/faster_rcnn_r50_1x_bdd100k/2023-07-27_02-07-33
         _locked: false
         _type_safe: true
     _locked: false
@@ -37,7 +37,7 @@ _fields:
       init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
         _convert_dict: true
         _fields:
-          save_prefix: vis4d-workspace/faster_rcnn_r50_1x_bdd100k/2023-07-26_23-10-29
+          save_prefix: vis4d-workspace/faster_rcnn_r50_1x_bdd100k/2023-07-27_02-07-33
           test_connector: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
             _convert_dict: true
             _fields:
@@ -322,6 +322,7 @@ _fields:
                 _locked: false
                 _type_safe: true
               samples_per_gpu: 1
+              sensors: null
               video_based_inference: false
               workers_per_gpu: 1
             _locked: false
@@ -491,6 +492,7 @@ _fields:
                 _type_safe: true
               pin_memory: true
               samples_per_gpu: 2
+              sensors: null
               shuffle: true
               workers_per_gpu: 2
             _locked: false
@@ -915,7 +917,7 @@ _fields:
       param_groups: null
     _locked: false
     _type_safe: true
-  output_dir: vis4d-workspace/faster_rcnn_r50_1x_bdd100k/2023-07-26_23-10-29
+  output_dir: vis4d-workspace/faster_rcnn_r50_1x_bdd100k/2023-07-27_02-07-33
   params: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
     _convert_dict: true
     _fields:
@@ -969,7 +971,7 @@ _fields:
       sync_batchnorm: false
       use_distributed_sampler: false
       val_check_interval: null
-      version: 2023-07-26_23-10-29
+      version: 2023-07-27_02-07-33
       wandb: false
       work_dir: vis4d-workspace
     _locked: false
@@ -994,7 +996,7 @@ _fields:
         _type_safe: true
     _locked: false
     _type_safe: true
-  timestamp: 2023-07-26_23-10-29
+  timestamp: 2023-07-27_02-07-33
   train_data_connector: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
     _convert_dict: true
     _fields:
@@ -1016,7 +1018,7 @@ _fields:
     _locked: false
     _type_safe: true
   use_tf32: false
-  version: 2023-07-26_23-10-29
+  version: 2023-07-27_02-07-33
   work_dir: vis4d-workspace
 _locked: false
 _type_safe: true

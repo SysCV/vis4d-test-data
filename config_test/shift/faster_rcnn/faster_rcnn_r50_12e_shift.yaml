@@ -25,7 +25,7 @@ _fields:
         _fields:
           checkpoint_period: 1
           epoch_based: true
-          save_prefix: vis4d-workspace/faster_rcnn_r50_12e_shift/2023-07-26_23-10-32
+          save_prefix: vis4d-workspace/faster_rcnn_r50_12e_shift/2023-07-27_02-07-35
         _locked: false
         _type_safe: true
     _locked: false
@@ -37,7 +37,7 @@ _fields:
       init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
         _convert_dict: true
         _fields:
-          save_prefix: vis4d-workspace/faster_rcnn_r50_12e_shift/2023-07-26_23-10-32
+          save_prefix: vis4d-workspace/faster_rcnn_r50_12e_shift/2023-07-27_02-07-35
           test_connector: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
             _convert_dict: true
             _fields:
@@ -213,27 +213,6 @@ _fields:
                         _convert_dict: true
                         _fields:
                           class_path: vis4d.data.transforms.to_tensor.ToTensor
-                          init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
-                            _convert_dict: true
-                            _fields:
-                              sensors:
-                              - front
-                            _locked: false
-                            _type_safe: true
-                        _locked: false
-                        _type_safe: true
-                      - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
-                        _convert_dict: true
-                        _fields:
-                          class_path: vis4d.data.transforms.to_tensor.SelectSensor
-                          init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
-                            _convert_dict: true
-                            _fields:
-                              all_sensors:
-                              - front
-                              sensor: front
-                            _locked: false
-                            _type_safe: true
                         _locked: false
                         _type_safe: true
                     _locked: false
@@ -315,6 +294,20 @@ _fields:
                               - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                                 _convert_dict: true
                                 _fields:
+                                  class_path: vis4d.data.transforms.select_sensor.SelectSensor
+                                  init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                                    _convert_dict: true
+                                    _fields:
+                                      selected_sensor: front
+                                      sensors:
+                                      - front
+                                    _locked: false
+                                    _type_safe: true
+                                _locked: false
+                                _type_safe: true
+                              - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                                _convert_dict: true
+                                _fields:
                                   class_path: vis4d.data.transforms.normalize.NormalizeImages
                                   init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                                     _convert_dict: true
@@ -323,8 +316,6 @@ _fields:
                                       - 122.884
                                       - 117.266
                                       - 110.287
-                                      sensors:
-                                      - front
                                       std:
                                       - 59.925
                                       - 59.466
@@ -342,6 +333,7 @@ _fields:
                 _locked: false
                 _type_safe: true
               samples_per_gpu: 2
+              sensors: null
               video_based_inference: false
               workers_per_gpu: 2
             _locked: false
@@ -367,27 +359,6 @@ _fields:
                         _convert_dict: true
                         _fields:
                           class_path: vis4d.data.transforms.to_tensor.ToTensor
-                          init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
-                            _convert_dict: true
-                            _fields:
-                              sensors:
-                              - front
-                            _locked: false
-                            _type_safe: true
-                        _locked: false
-                        _type_safe: true
-                      - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
-                        _convert_dict: true
-                        _fields:
-                          class_path: vis4d.data.transforms.to_tensor.SelectSensor
-                          init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
-                            _convert_dict: true
-                            _fields:
-                              all_sensors:
-                              - front
-                              sensor: front
-                            _locked: false
-                            _type_safe: true
                         _locked: false
                         _type_safe: true
                     _locked: false
@@ -469,13 +440,25 @@ _fields:
                               - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                                 _convert_dict: true
                                 _fields:
+                                  class_path: vis4d.data.transforms.select_sensor.SelectSensor
+                                  init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                                    _convert_dict: true
+                                    _fields:
+                                      selected_sensor: front
+                                      sensors:
+                                      - front
+                                    _locked: false
+                                    _type_safe: true
+                                _locked: false
+                                _type_safe: true
+                              - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                                _convert_dict: true
+                                _fields:
                                   class_path: vis4d.data.transforms.base.RandomApply
                                   init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                                     _convert_dict: true
                                     _fields:
                                       probability: 0.5
-                                      sensors:
-                                      - front
                                       transforms:
                                       - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
                                         _convert_dict: true
@@ -504,8 +487,6 @@ _fields:
                                       - 122.884
                                       - 117.266
                                       - 110.287
-                                      sensors:
-                                      - front
                                       std:
                                       - 59.925
                                       - 59.466
@@ -524,6 +505,7 @@ _fields:
                 _type_safe: true
               pin_memory: true
               samples_per_gpu: 2
+              sensors: null
               shuffle: true
               workers_per_gpu: 2
             _locked: false
@@ -948,7 +930,7 @@ _fields:
       param_groups: null
     _locked: false
     _type_safe: true
-  output_dir: vis4d-workspace/faster_rcnn_r50_12e_shift/2023-07-26_23-10-32
+  output_dir: vis4d-workspace/faster_rcnn_r50_12e_shift/2023-07-27_02-07-35
   params: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
     _convert_dict: true
     _fields:
@@ -1002,7 +984,7 @@ _fields:
       sync_batchnorm: false
       use_distributed_sampler: false
       val_check_interval: null
-      version: 2023-07-26_23-10-32
+      version: 2023-07-27_02-07-35
       wandb: false
       work_dir: vis4d-workspace
     _locked: false
@@ -1027,7 +1009,7 @@ _fields:
         _type_safe: true
     _locked: false
     _type_safe: true
-  timestamp: 2023-07-26_23-10-32
+  timestamp: 2023-07-27_02-07-35
   train_data_connector: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
     _convert_dict: true
     _fields:
@@ -1049,7 +1031,7 @@ _fields:
     _locked: false
     _type_safe: true
   use_tf32: false
-  version: 2023-07-26_23-10-32
+  version: 2023-07-27_02-07-35
   work_dir: vis4d-workspace
 _locked: false
 _type_safe: true
