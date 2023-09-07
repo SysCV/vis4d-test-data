@@ -1085,6 +1085,8 @@ _fields:
         _convert_dict: true
         _fields:
           begin: 0
+          convert_attributes: null
+          convert_epochs_to_steps: false
           end: 1000
           epoch_based: false
           scheduler: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
@@ -1106,6 +1108,8 @@ _fields:
         _convert_dict: true
         _fields:
           begin: 0
+          convert_attributes: null
+          convert_epochs_to_steps: false
           end: -1
           epoch_based: true
           scheduler: !!python/object:ml_collections.config_dict.config_dict.ConfigDict

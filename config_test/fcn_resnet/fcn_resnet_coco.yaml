@@ -25,7 +25,7 @@ _fields:
         _fields:
           checkpoint_period: 2000
           epoch_based: false
-          save_prefix: vis4d-workspace/fcn_coco/2023-07-27_02-07-32
+          save_prefix: vis4d-workspace/fcn_coco/2023-07-31_21-12-04
         _locked: false
         _type_safe: true
     _locked: false
@@ -485,6 +485,8 @@ _fields:
         _convert_dict: true
         _fields:
           begin: 0
+          convert_attributes: null
+          convert_epochs_to_steps: false
           end: 500
           epoch_based: false
           scheduler: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
@@ -506,6 +508,8 @@ _fields:
         _convert_dict: true
         _fields:
           begin: 0
+          convert_attributes: null
+          convert_epochs_to_steps: false
           end: -1
           epoch_based: false
           scheduler: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
@@ -541,7 +545,7 @@ _fields:
       param_groups: null
     _locked: false
     _type_safe: true
-  output_dir: vis4d-workspace/fcn_coco/2023-07-27_02-07-32
+  output_dir: vis4d-workspace/fcn_coco/2023-07-31_21-12-04
   params: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
     _convert_dict: true
     _fields:
@@ -596,7 +600,7 @@ _fields:
       sync_batchnorm: true
       use_distributed_sampler: false
       val_check_interval: 2000
-      version: 2023-07-27_02-07-32
+      version: 2023-07-31_21-12-04
       wandb: false
       work_dir: vis4d-workspace
     _locked: false
@@ -621,7 +625,7 @@ _fields:
         _type_safe: true
     _locked: false
     _type_safe: true
-  timestamp: 2023-07-27_02-07-32
+  timestamp: 2023-07-31_21-12-04
   train_data_connector: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
     _convert_dict: true
     _fields:
@@ -641,7 +645,7 @@ _fields:
     _type_safe: true
   use_tf32: false
   val_check_interval: 2000
-  version: 2023-07-27_02-07-32
+  version: 2023-07-31_21-12-04
   work_dir: vis4d-workspace
 _locked: false
 _type_safe: true
