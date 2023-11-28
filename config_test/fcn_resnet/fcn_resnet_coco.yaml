@@ -25,7 +25,7 @@ _fields:
         _fields:
           checkpoint_period: 2000
           epoch_based: false
-          save_prefix: vis4d-workspace/fcn_coco/2023-07-31_21-12-04
+          save_prefix: vis4d-workspace/fcn_coco/2023-11-28_11-40-32
         _locked: false
         _type_safe: true
     _locked: false
@@ -545,7 +545,7 @@ _fields:
       param_groups: null
     _locked: false
     _type_safe: true
-  output_dir: vis4d-workspace/fcn_coco/2023-07-31_21-12-04
+  output_dir: vis4d-workspace/fcn_coco/2023-11-28_11-40-32
   params: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
     _convert_dict: true
     _fields:
@@ -593,14 +593,14 @@ _fields:
       num_sanity_val_steps: 0
       overfit_batches: 0.0
       plugins: null
-      precision: 32-true
+      precision: null
       profiler: null
       reload_dataloaders_every_n_epochs: 0
       save_top_k: 1
       sync_batchnorm: true
       use_distributed_sampler: false
       val_check_interval: 2000
-      version: 2023-07-31_21-12-04
+      version: 2023-11-28_11-40-32
       wandb: false
       work_dir: vis4d-workspace
     _locked: false
@@ -625,7 +625,7 @@ _fields:
         _type_safe: true
     _locked: false
     _type_safe: true
-  timestamp: 2023-07-31_21-12-04
+  timestamp: 2023-11-28_11-40-32
   train_data_connector: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
     _convert_dict: true
     _fields:
@@ -645,7 +645,7 @@ _fields:
     _type_safe: true
   use_tf32: false
   val_check_interval: 2000
-  version: 2023-07-31_21-12-04
+  version: 2023-11-28_11-40-32
   work_dir: vis4d-workspace
 _locked: false
 _type_safe: true

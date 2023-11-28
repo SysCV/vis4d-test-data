@@ -25,7 +25,7 @@ _fields:
         _fields:
           checkpoint_period: 1
           epoch_based: true
-          save_prefix: vis4d-workspace/cc_3dt_frcnn_r101_fpn_velo_lstm_24e_nusc/2023-08-06_16-40-47
+          save_prefix: vis4d-workspace/cc_3dt_frcnn_r101_fpn_velo_lstm_24e_nusc/2023-11-28_11-40-31
         _locked: false
         _type_safe: true
     _locked: false
@@ -52,7 +52,7 @@ _fields:
             _locked: false
             _type_safe: true
           save_predictions: true
-          save_prefix: vis4d-workspace/cc_3dt_frcnn_r101_fpn_velo_lstm_24e_nusc/2023-08-06_16-40-47
+          save_prefix: vis4d-workspace/cc_3dt_frcnn_r101_fpn_velo_lstm_24e_nusc/2023-11-28_11-40-31
           test_connector: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
             _convert_dict: true
             _fields:
@@ -122,7 +122,7 @@ _fields:
             _locked: false
             _type_safe: true
           save_predictions: true
-          save_prefix: vis4d-workspace/cc_3dt_frcnn_r101_fpn_velo_lstm_24e_nusc/2023-08-06_16-40-47
+          save_prefix: vis4d-workspace/cc_3dt_frcnn_r101_fpn_velo_lstm_24e_nusc/2023-11-28_11-40-31
           test_connector: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
             _convert_dict: true
             _fields:
@@ -1172,7 +1172,7 @@ _fields:
         lr_mult: 10.0
     _locked: false
     _type_safe: true
-  output_dir: vis4d-workspace/cc_3dt_frcnn_r101_fpn_velo_lstm_24e_nusc/2023-08-06_16-40-47
+  output_dir: vis4d-workspace/cc_3dt_frcnn_r101_fpn_velo_lstm_24e_nusc/2023-11-28_11-40-31
   params: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
     _convert_dict: true
     _fields:
@@ -1218,14 +1218,14 @@ _fields:
       num_sanity_val_steps: 0
       overfit_batches: 0.0
       plugins: null
-      precision: 32-true
+      precision: null
       profiler: null
       reload_dataloaders_every_n_epochs: 0
       save_top_k: 1
       sync_batchnorm: false
       use_distributed_sampler: false
       val_check_interval: null
-      version: 2023-08-06_16-40-47
+      version: 2023-11-28_11-40-31
       wandb: false
       work_dir: vis4d-workspace
     _locked: false
@@ -1304,7 +1304,7 @@ _fields:
         _type_safe: true
     _locked: false
     _type_safe: true
-  timestamp: 2023-08-06_16-40-47
+  timestamp: 2023-11-28_11-40-31
   train_data_connector: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
     _convert_dict: true
     _fields:
@@ -1331,7 +1331,7 @@ _fields:
     _type_safe: true
   use_tf32: false
   velo_lstm_ckpt: ''
-  version: 2023-08-06_16-40-47
+  version: 2023-11-28_11-40-31
   work_dir: vis4d-workspace
 _locked: false
 _type_safe: true

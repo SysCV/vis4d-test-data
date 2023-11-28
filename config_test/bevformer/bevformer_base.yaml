@@ -25,7 +25,7 @@ _fields:
         _fields:
           checkpoint_period: 1
           epoch_based: true
-          save_prefix: vis4d-workspace/bevformer_base/2023-08-09_12-49-52
+          save_prefix: vis4d-workspace/bevformer_base/2023-11-28_11-40-30
         _locked: false
         _type_safe: true
     _locked: false
@@ -68,7 +68,7 @@ _fields:
             _locked: false
             _type_safe: true
           save_predictions: true
-          save_prefix: vis4d-workspace/bevformer_base/2023-08-09_12-49-52
+          save_prefix: vis4d-workspace/bevformer_base/2023-11-28_11-40-30
           test_connector: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
             _convert_dict: true
             _fields:
@@ -463,7 +463,7 @@ _fields:
         lr_mult: 0.1
     _locked: false
     _type_safe: true
-  output_dir: vis4d-workspace/bevformer_base/2023-08-09_12-49-52
+  output_dir: vis4d-workspace/bevformer_base/2023-11-28_11-40-30
   params: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
     _convert_dict: true
     _fields:
@@ -509,14 +509,14 @@ _fields:
       num_sanity_val_steps: 0
       overfit_batches: 0.0
       plugins: null
-      precision: 32-true
+      precision: null
       profiler: null
       reload_dataloaders_every_n_epochs: 0
       save_top_k: 1
       sync_batchnorm: false
       use_distributed_sampler: false
       val_check_interval: null
-      version: 2023-08-09_12-49-52
+      version: 2023-11-28_11-40-30
       wandb: false
       work_dir: vis4d-workspace
     _locked: false
@@ -591,10 +591,10 @@ _fields:
         _type_safe: true
     _locked: false
     _type_safe: true
-  timestamp: 2023-08-09_12-49-52
+  timestamp: 2023-11-28_11-40-30
   train_data_connector: null
   use_tf32: false
-  version: 2023-08-09_12-49-52
+  version: 2023-11-28_11-40-30
   work_dir: vis4d-workspace
 _locked: false
 _type_safe: true

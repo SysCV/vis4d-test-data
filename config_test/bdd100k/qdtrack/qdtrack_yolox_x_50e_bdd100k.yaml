@@ -25,7 +25,7 @@ _fields:
         _fields:
           checkpoint_period: 1
           epoch_based: true
-          save_prefix: vis4d-workspace/qdtrack_yolox_x_50e_bdd100k/2023-07-31_21-12-06
+          save_prefix: vis4d-workspace/qdtrack_yolox_x_50e_bdd100k/2023-11-28_11-40-33
         _locked: false
         _type_safe: true
     _locked: false
@@ -61,7 +61,7 @@ _fields:
       init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
         _convert_dict: true
         _fields:
-          save_prefix: vis4d-workspace/qdtrack_yolox_x_50e_bdd100k/2023-07-31_21-12-06
+          save_prefix: vis4d-workspace/qdtrack_yolox_x_50e_bdd100k/2023-11-28_11-40-33
           test_connector: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
             _convert_dict: true
             _fields:
@@ -1013,6 +1013,8 @@ _fields:
                                     - []
                                     _forward_hooks: !!python/object/apply:collections.OrderedDict
                                     - []
+                                    _forward_hooks_always_called: !!python/object/apply:collections.OrderedDict
+                                    - []
                                     _forward_hooks_with_kwargs: !!python/object/apply:collections.OrderedDict
                                     - []
                                     _forward_pre_hooks: !!python/object/apply:collections.OrderedDict
@@ -1185,7 +1187,7 @@ _fields:
         - yolox_head
     _locked: false
     _type_safe: true
-  output_dir: vis4d-workspace/qdtrack_yolox_x_50e_bdd100k/2023-07-31_21-12-06
+  output_dir: vis4d-workspace/qdtrack_yolox_x_50e_bdd100k/2023-11-28_11-40-33
   params: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
     _convert_dict: true
     _fields:
@@ -1211,7 +1213,7 @@ _fields:
           init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
             _convert_dict: true
             _fields:
-              dirpath: vis4d-workspace/qdtrack_yolox_x_50e_bdd100k/2023-07-31_21-12-06/checkpoints
+              dirpath: vis4d-workspace/qdtrack_yolox_x_50e_bdd100k/2023-11-28_11-40-33/checkpoints
               every_n_epochs: 5
               mode: max
               monitor: step
@@ -1257,7 +1259,7 @@ _fields:
       sync_batchnorm: false
       use_distributed_sampler: false
       val_check_interval: null
-      version: 2023-07-31_21-12-06
+      version: 2023-11-28_11-40-33
       wandb: true
       work_dir: vis4d-workspace
     _locked: false
@@ -1283,7 +1285,7 @@ _fields:
         _type_safe: true
     _locked: false
     _type_safe: true
-  timestamp: 2023-07-31_21-12-06
+  timestamp: 2023-11-28_11-40-33
   train_data_connector: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
     _convert_dict: true
     _fields:
@@ -1309,7 +1311,7 @@ _fields:
     _locked: false
     _type_safe: true
   use_tf32: false
-  version: 2023-07-31_21-12-06
+  version: 2023-11-28_11-40-33
   work_dir: vis4d-workspace
 _locked: false
 _type_safe: true
