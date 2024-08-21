@@ -25,7 +25,7 @@ _fields:
         _fields:
           checkpoint_period: 1
           epoch_based: true
-          save_prefix: vis4d-workspace/faster_rcnn_r50_fpn_coco/2024-04-11_17-40-53
+          save_prefix: vis4d-workspace/faster_rcnn_r50_fpn_coco/2024-08-21_16-35-33
         _locked: false
         _type_safe: true
     _locked: false
@@ -37,7 +37,7 @@ _fields:
       init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
         _convert_dict: true
         _fields:
-          save_prefix: vis4d-workspace/faster_rcnn_r50_fpn_coco/2024-04-11_17-40-53
+          save_prefix: vis4d-workspace/faster_rcnn_r50_fpn_coco/2024-08-21_16-35-33
           test_connector: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
             _convert_dict: true
             _fields:
@@ -175,6 +175,7 @@ _fields:
         _type_safe: true
     _locked: false
     _type_safe: true
+  compute_flops: false
   data: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
     _convert_dict: true
     _fields:
@@ -918,7 +919,7 @@ _fields:
       param_groups: null
     _locked: false
     _type_safe: true
-  output_dir: vis4d-workspace/faster_rcnn_r50_fpn_coco/2024-04-11_17-40-53
+  output_dir: vis4d-workspace/faster_rcnn_r50_fpn_coco/2024-08-21_16-35-33
   params: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
     _convert_dict: true
     _fields:
@@ -972,7 +973,7 @@ _fields:
       sync_batchnorm: false
       use_distributed_sampler: false
       val_check_interval: null
-      version: 2024-04-11_17-40-53
+      version: 2024-08-21_16-35-33
       wandb: false
       work_dir: vis4d-workspace
     _locked: false
@@ -998,7 +999,7 @@ _fields:
     _locked: false
     _type_safe: true
   tf32_matmul_precision: highest
-  timestamp: 2024-04-11_17-40-53
+  timestamp: 2024-08-21_16-35-33
   train_data_connector: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
     _convert_dict: true
     _fields:
@@ -1020,7 +1021,7 @@ _fields:
     _locked: false
     _type_safe: true
   use_tf32: false
-  version: 2024-04-11_17-40-53
+  version: 2024-08-21_16-35-33
   work_dir: vis4d-workspace
 _locked: false
 _type_safe: true
