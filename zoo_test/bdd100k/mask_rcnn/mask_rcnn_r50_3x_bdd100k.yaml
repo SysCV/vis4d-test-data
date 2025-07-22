@@ -1,237 +1,294 @@
 !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+_allow_dotted_keys: false
 _convert_dict: true
 _fields:
   benchmark: false
   callbacks:
   - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+    _allow_dotted_keys: false
     _convert_dict: true
     _fields:
       class_path: vis4d.engine.callbacks.logging.LoggingCallback
       init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+        _allow_dotted_keys: false
         _convert_dict: true
         _fields:
           epoch_based: true
           refresh_rate: 50
         _locked: false
+        _sort_keys: true
         _type_safe: true
     _locked: false
+    _sort_keys: true
     _type_safe: true
   - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
-    _convert_dict: true
-    _fields:
-      class_path: vis4d.engine.callbacks.checkpoint.CheckpointCallback
-      init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
-        _convert_dict: true
-        _fields:
-          checkpoint_period: 1
-          epoch_based: true
-          save_prefix: vis4d-workspace/mask_rcnn_r50_3x_bdd100k/2024-08-21_16-35-33
-        _locked: false
-        _type_safe: true
-    _locked: false
-    _type_safe: true
-  - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+    _allow_dotted_keys: false
     _convert_dict: true
     _fields:
       class_path: vis4d.engine.callbacks.visualizer.VisualizerCallback
       init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+        _allow_dotted_keys: false
         _convert_dict: true
         _fields:
-          save_prefix: vis4d-workspace/mask_rcnn_r50_3x_bdd100k/2024-08-21_16-35-33
+          save_prefix: vis4d-workspace/mask_rcnn_r50_3x_bdd100k/2025-07-22_23-26-24
           test_connector: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+            _allow_dotted_keys: false
             _convert_dict: true
             _fields:
               class_path: vis4d.engine.connectors.base.CallbackConnector
               init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                _allow_dotted_keys: false
                 _convert_dict: true
                 _fields:
                   key_mapping: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                    _allow_dotted_keys: false
                     _convert_dict: true
                     _fields:
                       image_names: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                        _allow_dotted_keys: false
                         _convert_dict: true
                         _fields:
                           key: sample_names
                           source: data
                         _locked: false
+                        _sort_keys: true
                         _type_safe: true
                       images: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                        _allow_dotted_keys: false
                         _convert_dict: true
                         _fields:
                           key: original_images
                           source: data
                         _locked: false
+                        _sort_keys: true
                         _type_safe: true
                       masks: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                        _allow_dotted_keys: false
                         _convert_dict: true
                         _fields:
                           key: masks.masks
                           source: prediction
                         _locked: false
+                        _sort_keys: true
                         _type_safe: true
                     _locked: false
+                    _sort_keys: true
                     _type_safe: true
                 _locked: false
+                _sort_keys: true
                 _type_safe: true
             _locked: false
+            _sort_keys: true
             _type_safe: true
           visualizer: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+            _allow_dotted_keys: false
             _convert_dict: true
             _fields:
               class_path: vis4d.vis.image.seg_mask_visualizer.SegMaskVisualizer
               init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                _allow_dotted_keys: false
                 _convert_dict: true
                 _fields:
                   vis_freq: 25
                 _locked: false
+                _sort_keys: true
                 _type_safe: true
             _locked: false
+            _sort_keys: true
             _type_safe: true
         _locked: false
+        _sort_keys: true
         _type_safe: true
     _locked: false
+    _sort_keys: true
     _type_safe: true
   - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+    _allow_dotted_keys: false
     _convert_dict: true
     _fields:
       class_path: vis4d.engine.callbacks.evaluator.EvaluatorCallback
       init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+        _allow_dotted_keys: false
         _convert_dict: true
         _fields:
           evaluator: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+            _allow_dotted_keys: false
             _convert_dict: true
             _fields:
               class_path: vis4d.eval.bdd100k.detect.BDD100KDetectEvaluator
               init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                _allow_dotted_keys: false
                 _convert_dict: true
                 _fields:
                   annotation_path: data/bdd100k/labels/ins_seg_val_rle.json
                   config_path: ins_seg
                 _locked: false
+                _sort_keys: true
                 _type_safe: true
             _locked: false
+            _sort_keys: true
             _type_safe: true
           test_connector: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+            _allow_dotted_keys: false
             _convert_dict: true
             _fields:
               class_path: vis4d.engine.connectors.base.CallbackConnector
               init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                _allow_dotted_keys: false
                 _convert_dict: true
                 _fields:
                   key_mapping: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                    _allow_dotted_keys: false
                     _convert_dict: true
                     _fields:
                       frame_ids: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                        _allow_dotted_keys: false
                         _convert_dict: true
                         _fields:
                           key: frame_ids
                           source: data
                         _locked: false
+                        _sort_keys: true
                         _type_safe: true
                       pred_boxes: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                        _allow_dotted_keys: false
                         _convert_dict: true
                         _fields:
                           key: boxes.boxes
                           source: prediction
                         _locked: false
+                        _sort_keys: true
                         _type_safe: true
                       pred_classes: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                        _allow_dotted_keys: false
                         _convert_dict: true
                         _fields:
                           key: boxes.class_ids
                           source: prediction
                         _locked: false
+                        _sort_keys: true
                         _type_safe: true
                       pred_masks: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                        _allow_dotted_keys: false
                         _convert_dict: true
                         _fields:
                           key: masks.masks
                           source: prediction
                         _locked: false
+                        _sort_keys: true
                         _type_safe: true
                       pred_scores: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                        _allow_dotted_keys: false
                         _convert_dict: true
                         _fields:
                           key: boxes.scores
                           source: prediction
                         _locked: false
+                        _sort_keys: true
                         _type_safe: true
                       sample_names: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                        _allow_dotted_keys: false
                         _convert_dict: true
                         _fields:
                           key: sample_names
                           source: data
                         _locked: false
+                        _sort_keys: true
                         _type_safe: true
                       sequence_names: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                        _allow_dotted_keys: false
                         _convert_dict: true
                         _fields:
                           key: sequence_names
                           source: data
                         _locked: false
+                        _sort_keys: true
                         _type_safe: true
                     _locked: false
+                    _sort_keys: true
                     _type_safe: true
                 _locked: false
+                _sort_keys: true
                 _type_safe: true
             _locked: false
+            _sort_keys: true
             _type_safe: true
         _locked: false
+        _sort_keys: true
         _type_safe: true
     _locked: false
+    _sort_keys: true
     _type_safe: true
+  check_unused_parameters: false
   check_val_every_n_epoch: 3
   compute_flops: false
   data: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+    _allow_dotted_keys: false
     _convert_dict: true
     _fields:
       test_dataloader: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+        _allow_dotted_keys: false
         _convert_dict: true
         _fields:
           class_path: vis4d.data.loader.build_inference_dataloaders
           init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+            _allow_dotted_keys: false
             _convert_dict: true
             _fields:
               batchprocess_fn: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                _allow_dotted_keys: false
                 _convert_dict: true
                 _fields:
                   class_path: vis4d.data.transforms.base.compose
                   init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                    _allow_dotted_keys: false
                     _convert_dict: true
                     _fields:
                       transforms:
                       - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                        _allow_dotted_keys: false
                         _convert_dict: true
                         _fields:
                           class_path: vis4d.data.transforms.pad.PadImages
                         _locked: false
+                        _sort_keys: true
                         _type_safe: true
                       - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                        _allow_dotted_keys: false
                         _convert_dict: true
                         _fields:
                           class_path: vis4d.data.transforms.to_tensor.ToTensor
                         _locked: false
+                        _sort_keys: true
                         _type_safe: true
                     _locked: false
+                    _sort_keys: true
                     _type_safe: true
                 _locked: false
+                _sort_keys: true
                 _type_safe: true
               collate_fn: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                _allow_dotted_keys: false
                 _convert_dict: true
                 _fields:
                   class_path: vis4d.config.config_dict.DelayedInstantiator
                   init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                    _allow_dotted_keys: false
                     _convert_dict: true
                     _fields:
                       instantiable: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                        _allow_dotted_keys: false
                         _convert_dict: true
                         _fields:
                           _class_path: vis4d.data.loader.default_collate
                         _locked: false
+                        _sort_keys: true
                         _type_safe: true
                     _locked: false
+                    _sort_keys: true
                     _type_safe: true
                 _locked: false
+                _sort_keys: true
                 _type_safe: true
               collate_keys: !!python/tuple
               - seg_masks
@@ -241,48 +298,60 @@ _fields:
               - optical_flows
               - categories
               datasets: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                _allow_dotted_keys: false
                 _convert_dict: true
                 _fields:
                   class_path: vis4d.data.data_pipe.DataPipe
                   init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                    _allow_dotted_keys: false
                     _convert_dict: true
                     _fields:
                       datasets: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                        _allow_dotted_keys: false
                         _convert_dict: true
                         _fields:
                           class_path: vis4d.data.datasets.bdd100k.BDD100K
                           init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                            _allow_dotted_keys: false
                             _convert_dict: true
                             _fields:
                               annotation_path: data/bdd100k/labels/ins_seg_val_rle.json
                               config_path: ins_seg
                               data_backend: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                                _allow_dotted_keys: false
                                 _convert_dict: true
                                 _fields:
                                   class_path: vis4d.data.io.hdf5.HDF5Backend
                                 _locked: false
+                                _sort_keys: true
                                 _type_safe: true
                               data_root: data/bdd100k/images/10k/val
                               keys_to_load: !!python/tuple
                               - images
                               - original_images
                             _locked: false
+                            _sort_keys: true
                             _type_safe: true
                         _locked: false
+                        _sort_keys: true
                         _type_safe: true
                       preprocess_fn: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                        _allow_dotted_keys: false
                         _convert_dict: true
                         _fields:
                           class_path: vis4d.data.transforms.base.compose
                           init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                            _allow_dotted_keys: false
                             _convert_dict: true
                             _fields:
                               transforms:
                               - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                                _allow_dotted_keys: false
                                 _convert_dict: true
                                 _fields:
                                   class_path: vis4d.data.transforms.resize.GenResizeParameters
                                   init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                                    _allow_dotted_keys: false
                                     _convert_dict: true
                                     _fields:
                                       align_long_edge: true
@@ -291,84 +360,113 @@ _fields:
                                       - 720
                                       - 1280
                                     _locked: false
+                                    _sort_keys: true
                                     _type_safe: true
                                 _locked: false
+                                _sort_keys: true
                                 _type_safe: true
                               - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                                _allow_dotted_keys: false
                                 _convert_dict: true
                                 _fields:
                                   class_path: vis4d.data.transforms.resize.ResizeImages
                                 _locked: false
+                                _sort_keys: true
                                 _type_safe: true
                               - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                                _allow_dotted_keys: false
                                 _convert_dict: true
                                 _fields:
                                   class_path: vis4d.data.transforms.normalize.NormalizeImages
                                 _locked: false
+                                _sort_keys: true
                                 _type_safe: true
                             _locked: false
+                            _sort_keys: true
                             _type_safe: true
                         _locked: false
+                        _sort_keys: true
                         _type_safe: true
                     _locked: false
+                    _sort_keys: true
                     _type_safe: true
                 _locked: false
+                _sort_keys: true
                 _type_safe: true
               samples_per_gpu: 1
               sensors: null
               video_based_inference: false
               workers_per_gpu: 1
             _locked: false
+            _sort_keys: true
             _type_safe: true
         _locked: false
+        _sort_keys: true
         _type_safe: true
       train_dataloader: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+        _allow_dotted_keys: false
         _convert_dict: true
         _fields:
           class_path: vis4d.data.loader.build_train_dataloader
           init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+            _allow_dotted_keys: false
             _convert_dict: true
             _fields:
+              aspect_ratio_grouping: false
               batchprocess_fn: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                _allow_dotted_keys: false
                 _convert_dict: true
                 _fields:
                   class_path: vis4d.data.transforms.base.compose
                   init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                    _allow_dotted_keys: false
                     _convert_dict: true
                     _fields:
                       transforms:
                       - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                        _allow_dotted_keys: false
                         _convert_dict: true
                         _fields:
                           class_path: vis4d.data.transforms.pad.PadImages
                         _locked: false
+                        _sort_keys: true
                         _type_safe: true
                       - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                        _allow_dotted_keys: false
                         _convert_dict: true
                         _fields:
                           class_path: vis4d.data.transforms.to_tensor.ToTensor
                         _locked: false
+                        _sort_keys: true
                         _type_safe: true
                     _locked: false
+                    _sort_keys: true
                     _type_safe: true
                 _locked: false
+                _sort_keys: true
                 _type_safe: true
               collate_fn: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                _allow_dotted_keys: false
                 _convert_dict: true
                 _fields:
                   class_path: vis4d.config.config_dict.DelayedInstantiator
                   init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                    _allow_dotted_keys: false
                     _convert_dict: true
                     _fields:
                       instantiable: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                        _allow_dotted_keys: false
                         _convert_dict: true
                         _fields:
                           _class_path: vis4d.data.loader.default_collate
                         _locked: false
+                        _sort_keys: true
                         _type_safe: true
                     _locked: false
+                    _sort_keys: true
                     _type_safe: true
                 _locked: false
+                _sort_keys: true
                 _type_safe: true
               collate_keys: !!python/tuple
               - seg_masks
@@ -378,26 +476,32 @@ _fields:
               - optical_flows
               - categories
               dataset: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                _allow_dotted_keys: false
                 _convert_dict: true
                 _fields:
                   class_path: vis4d.data.data_pipe.DataPipe
                   init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                    _allow_dotted_keys: false
                     _convert_dict: true
                     _fields:
                       datasets: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                        _allow_dotted_keys: false
                         _convert_dict: true
                         _fields:
                           class_path: vis4d.data.datasets.bdd100k.BDD100K
                           init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                            _allow_dotted_keys: false
                             _convert_dict: true
                             _fields:
                               annotation_path: data/bdd100k/labels/ins_seg_train_rle.json
                               config_path: ins_seg
                               data_backend: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                                _allow_dotted_keys: false
                                 _convert_dict: true
                                 _fields:
                                   class_path: vis4d.data.io.hdf5.HDF5Backend
                                 _locked: false
+                                _sort_keys: true
                                 _type_safe: true
                               data_root: data/bdd100k/images/10k/train
                               keys_to_load: !!python/tuple
@@ -406,22 +510,28 @@ _fields:
                               - instance_masks
                               skip_empty_samples: true
                             _locked: false
+                            _sort_keys: true
                             _type_safe: true
                         _locked: false
+                        _sort_keys: true
                         _type_safe: true
                       preprocess_fn: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                        _allow_dotted_keys: false
                         _convert_dict: true
                         _fields:
                           class_path: vis4d.data.transforms.base.compose
                           init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                            _allow_dotted_keys: false
                             _convert_dict: true
                             _fields:
                               transforms:
                               - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                                _allow_dotted_keys: false
                                 _convert_dict: true
                                 _fields:
                                   class_path: vis4d.data.transforms.resize.GenResizeParameters
                                   init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                                    _allow_dotted_keys: false
                                     _convert_dict: true
                                     _fields:
                                       align_long_edge: true
@@ -447,71 +557,95 @@ _fields:
                                         - 600
                                         - 1280
                                     _locked: false
+                                    _sort_keys: true
                                     _type_safe: true
                                 _locked: false
+                                _sort_keys: true
                                 _type_safe: true
                               - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                                _allow_dotted_keys: false
                                 _convert_dict: true
                                 _fields:
                                   class_path: vis4d.data.transforms.resize.ResizeImages
                                 _locked: false
+                                _sort_keys: true
                                 _type_safe: true
                               - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                                _allow_dotted_keys: false
                                 _convert_dict: true
                                 _fields:
                                   class_path: vis4d.data.transforms.resize.ResizeBoxes2D
                                 _locked: false
+                                _sort_keys: true
                                 _type_safe: true
                               - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                                _allow_dotted_keys: false
                                 _convert_dict: true
                                 _fields:
                                   class_path: vis4d.data.transforms.resize.ResizeInstanceMasks
                                 _locked: false
+                                _sort_keys: true
                                 _type_safe: true
                               - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                                _allow_dotted_keys: false
                                 _convert_dict: true
                                 _fields:
                                   class_path: vis4d.data.transforms.base.RandomApply
                                   init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                                    _allow_dotted_keys: false
                                     _convert_dict: true
                                     _fields:
                                       probability: 0.5
                                       transforms:
                                       - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                                        _allow_dotted_keys: false
                                         _convert_dict: true
                                         _fields:
                                           class_path: vis4d.data.transforms.flip.FlipImages
                                         _locked: false
+                                        _sort_keys: true
                                         _type_safe: true
                                       - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                                        _allow_dotted_keys: false
                                         _convert_dict: true
                                         _fields:
                                           class_path: vis4d.data.transforms.flip.FlipBoxes2D
                                         _locked: false
+                                        _sort_keys: true
                                         _type_safe: true
                                       - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                                        _allow_dotted_keys: false
                                         _convert_dict: true
                                         _fields:
                                           class_path: vis4d.data.transforms.flip.FlipInstanceMasks
                                         _locked: false
+                                        _sort_keys: true
                                         _type_safe: true
                                     _locked: false
+                                    _sort_keys: true
                                     _type_safe: true
                                 _locked: false
+                                _sort_keys: true
                                 _type_safe: true
                               - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                                _allow_dotted_keys: false
                                 _convert_dict: true
                                 _fields:
                                   class_path: vis4d.data.transforms.normalize.NormalizeImages
                                 _locked: false
+                                _sort_keys: true
                                 _type_safe: true
                             _locked: false
+                            _sort_keys: true
                             _type_safe: true
                         _locked: false
+                        _sort_keys: true
                         _type_safe: true
                     _locked: false
+                    _sort_keys: true
                     _type_safe: true
                 _locked: false
+                _sort_keys: true
                 _type_safe: true
               pin_memory: true
               samples_per_gpu: 2
@@ -519,77 +653,100 @@ _fields:
               shuffle: true
               workers_per_gpu: 2
             _locked: false
+            _sort_keys: true
             _type_safe: true
         _locked: false
+        _sort_keys: true
         _type_safe: true
     _locked: false
+    _sort_keys: true
     _type_safe: true
   experiment_name: mask_rcnn_r50_3x_bdd100k
   log_every_n_steps: 50
   loss: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+    _allow_dotted_keys: false
     _convert_dict: true
     _fields:
       class_path: vis4d.engine.loss_module.LossModule
       init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+        _allow_dotted_keys: false
         _convert_dict: true
         _fields:
           losses:
           - connector: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+              _allow_dotted_keys: false
               _convert_dict: true
               _fields:
                 class_path: vis4d.engine.connectors.base.LossConnector
                 init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                  _allow_dotted_keys: false
                   _convert_dict: true
                   _fields:
                     key_mapping: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                      _allow_dotted_keys: false
                       _convert_dict: true
                       _fields:
                         cls_outs: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                          _allow_dotted_keys: false
                           _convert_dict: true
                           _fields:
                             key: boxes.rpn.cls
                             source: prediction
                           _locked: false
+                          _sort_keys: true
                           _type_safe: true
                         images_hw: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                          _allow_dotted_keys: false
                           _convert_dict: true
                           _fields:
                             key: input_hw
                             source: data
                           _locked: false
+                          _sort_keys: true
                           _type_safe: true
                         reg_outs: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                          _allow_dotted_keys: false
                           _convert_dict: true
                           _fields:
                             key: boxes.rpn.box
                             source: prediction
                           _locked: false
+                          _sort_keys: true
                           _type_safe: true
                         target_boxes: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                          _allow_dotted_keys: false
                           _convert_dict: true
                           _fields:
                             key: boxes2d
                             source: data
                           _locked: false
+                          _sort_keys: true
                           _type_safe: true
                       _locked: false
+                      _sort_keys: true
                       _type_safe: true
                   _locked: false
+                  _sort_keys: true
                   _type_safe: true
               _locked: false
+              _sort_keys: true
               _type_safe: true
             loss: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+              _allow_dotted_keys: false
               _convert_dict: true
               _fields:
                 class_path: vis4d.op.detect.rpn.RPNLoss
                 init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                  _allow_dotted_keys: false
                   _convert_dict: true
                   _fields:
                     anchor_generator: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                      _allow_dotted_keys: false
                       _convert_dict: true
                       _fields:
                         class_path: vis4d.op.box.anchor.anchor_generator.AnchorGenerator
                         init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                          _allow_dotted_keys: false
                           _convert_dict: true
                           _fields:
                             ratios:
@@ -605,14 +762,18 @@ _fields:
                             - 32
                             - 64
                           _locked: false
+                          _sort_keys: true
                           _type_safe: true
                       _locked: false
+                      _sort_keys: true
                       _type_safe: true
                     box_encoder: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                      _allow_dotted_keys: false
                       _convert_dict: true
                       _fields:
                         class_path: vis4d.op.box.encoder.delta_xywh.DeltaXYWHBBoxEncoder
                         init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                          _allow_dotted_keys: false
                           _convert_dict: true
                           _fields:
                             target_means: !!python/tuple
@@ -626,83 +787,109 @@ _fields:
                             - 1.0
                             - 1.0
                           _locked: false
+                          _sort_keys: true
                           _type_safe: true
                       _locked: false
+                      _sort_keys: true
                       _type_safe: true
                   _locked: false
+                  _sort_keys: true
                   _type_safe: true
               _locked: false
+              _sort_keys: true
               _type_safe: true
           - connector: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+              _allow_dotted_keys: false
               _convert_dict: true
               _fields:
                 class_path: vis4d.engine.connectors.base.LossConnector
                 init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                  _allow_dotted_keys: false
                   _convert_dict: true
                   _fields:
                     key_mapping: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                      _allow_dotted_keys: false
                       _convert_dict: true
                       _fields:
                         boxes: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                          _allow_dotted_keys: false
                           _convert_dict: true
                           _fields:
                             key: boxes.sampled_proposals.boxes
                             source: prediction
                           _locked: false
+                          _sort_keys: true
                           _type_safe: true
                         boxes_mask: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                          _allow_dotted_keys: false
                           _convert_dict: true
                           _fields:
                             key: boxes.sampled_targets.labels
                             source: prediction
                           _locked: false
+                          _sort_keys: true
                           _type_safe: true
                         class_outs: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                          _allow_dotted_keys: false
                           _convert_dict: true
                           _fields:
                             key: boxes.roi.cls_score
                             source: prediction
                           _locked: false
+                          _sort_keys: true
                           _type_safe: true
                         regression_outs: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                          _allow_dotted_keys: false
                           _convert_dict: true
                           _fields:
                             key: boxes.roi.bbox_pred
                             source: prediction
                           _locked: false
+                          _sort_keys: true
                           _type_safe: true
                         target_boxes: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                          _allow_dotted_keys: false
                           _convert_dict: true
                           _fields:
                             key: boxes.sampled_targets.boxes
                             source: prediction
                           _locked: false
+                          _sort_keys: true
                           _type_safe: true
                         target_classes: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                          _allow_dotted_keys: false
                           _convert_dict: true
                           _fields:
                             key: boxes.sampled_targets.classes
                             source: prediction
                           _locked: false
+                          _sort_keys: true
                           _type_safe: true
                       _locked: false
+                      _sort_keys: true
                       _type_safe: true
                   _locked: false
+                  _sort_keys: true
                   _type_safe: true
               _locked: false
+              _sort_keys: true
               _type_safe: true
             loss: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+              _allow_dotted_keys: false
               _convert_dict: true
               _fields:
                 class_path: vis4d.op.detect.rcnn.RCNNLoss
                 init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                  _allow_dotted_keys: false
                   _convert_dict: true
                   _fields:
                     box_encoder: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                      _allow_dotted_keys: false
                       _convert_dict: true
                       _fields:
                         class_path: vis4d.op.box.encoder.delta_xywh.DeltaXYWHBBoxEncoder
                         init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                          _allow_dotted_keys: false
                           _convert_dict: true
                           _fields:
                             target_means: !!python/tuple
@@ -716,142 +903,188 @@ _fields:
                             - 0.2
                             - 0.2
                           _locked: false
+                          _sort_keys: true
                           _type_safe: true
                       _locked: false
+                      _sort_keys: true
                       _type_safe: true
                     num_classes: 8
                   _locked: false
+                  _sort_keys: true
                   _type_safe: true
               _locked: false
+              _sort_keys: true
               _type_safe: true
           - connector: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+              _allow_dotted_keys: false
               _convert_dict: true
               _fields:
                 class_path: vis4d.engine.connectors.base.LossConnector
                 init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                  _allow_dotted_keys: false
                   _convert_dict: true
                   _fields:
                     key_mapping: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                      _allow_dotted_keys: false
                       _convert_dict: true
                       _fields:
                         mask_preds: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                          _allow_dotted_keys: false
                           _convert_dict: true
                           _fields:
                             key: masks.mask_pred
                             source: prediction
                           _locked: false
+                          _sort_keys: true
                           _type_safe: true
                         sampled_proposals: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                          _allow_dotted_keys: false
                           _convert_dict: true
                           _fields:
                             key: boxes.sampled_proposals
                             source: prediction
                           _locked: false
+                          _sort_keys: true
                           _type_safe: true
                         sampled_target_indices: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                          _allow_dotted_keys: false
                           _convert_dict: true
                           _fields:
                             key: boxes.sampled_target_indices
                             source: prediction
                           _locked: false
+                          _sort_keys: true
                           _type_safe: true
                         sampled_targets: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                          _allow_dotted_keys: false
                           _convert_dict: true
                           _fields:
                             key: boxes.sampled_targets
                             source: prediction
                           _locked: false
+                          _sort_keys: true
                           _type_safe: true
                         target_masks: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                          _allow_dotted_keys: false
                           _convert_dict: true
                           _fields:
                             key: instance_masks
                             source: data
                           _locked: false
+                          _sort_keys: true
                           _type_safe: true
                       _locked: false
+                      _sort_keys: true
                       _type_safe: true
                   _locked: false
+                  _sort_keys: true
                   _type_safe: true
               _locked: false
+              _sort_keys: true
               _type_safe: true
             loss: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+              _allow_dotted_keys: false
               _convert_dict: true
               _fields:
                 class_path: vis4d.op.detect.mask_rcnn.SampledMaskLoss
                 init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                  _allow_dotted_keys: false
                   _convert_dict: true
                   _fields:
                     loss: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                      _allow_dotted_keys: false
                       _convert_dict: true
                       _fields:
                         class_path: vis4d.op.detect.mask_rcnn.MaskRCNNHeadLoss
                         init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                          _allow_dotted_keys: false
                           _convert_dict: true
                           _fields:
                             num_classes: 8
                           _locked: false
+                          _sort_keys: true
                           _type_safe: true
                       _locked: false
+                      _sort_keys: true
                       _type_safe: true
                     mask_sampler: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                      _allow_dotted_keys: false
                       _convert_dict: true
                       _fields:
                         class_path: vis4d.config.config_dict.DelayedInstantiator
                         init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                          _allow_dotted_keys: false
                           _convert_dict: true
                           _fields:
                             instantiable: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                              _allow_dotted_keys: false
                               _convert_dict: true
                               _fields:
                                 _class_path: vis4d.op.detect.mask_rcnn.positive_mask_sampler
                               _locked: false
+                              _sort_keys: true
                               _type_safe: true
                           _locked: false
+                          _sort_keys: true
                           _type_safe: true
                       _locked: false
+                      _sort_keys: true
                       _type_safe: true
                   _locked: false
+                  _sort_keys: true
                   _type_safe: true
               _locked: false
+              _sort_keys: true
               _type_safe: true
         _locked: false
+        _sort_keys: true
         _type_safe: true
     _locked: false
+    _sort_keys: true
     _type_safe: true
   model: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+    _allow_dotted_keys: false
     _convert_dict: true
     _fields:
       class_path: vis4d.model.detect.mask_rcnn.MaskRCNN
       init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+        _allow_dotted_keys: false
         _convert_dict: true
         _fields:
           basemodel: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+            _allow_dotted_keys: false
             _convert_dict: true
             _fields:
               class_path: vis4d.op.base.resnet.ResNet
               init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                _allow_dotted_keys: false
                 _convert_dict: true
                 _fields:
                   pretrained: true
                   resnet_name: resnet50
                   trainable_layers: 3
                 _locked: false
+                _sort_keys: true
                 _type_safe: true
             _locked: false
+            _sort_keys: true
             _type_safe: true
           faster_rcnn_head: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+            _allow_dotted_keys: false
             _convert_dict: true
             _fields:
               class_path: vis4d.op.detect.faster_rcnn.FasterRCNNHead
               init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                _allow_dotted_keys: false
                 _convert_dict: true
                 _fields:
                   anchor_generator: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                    _allow_dotted_keys: false
                     _convert_dict: true
                     _fields:
                       class_path: vis4d.op.box.anchor.anchor_generator.AnchorGenerator
                       init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                        _allow_dotted_keys: false
                         _convert_dict: true
                         _fields:
                           ratios:
@@ -867,14 +1100,18 @@ _fields:
                           - 32
                           - 64
                         _locked: false
+                        _sort_keys: true
                         _type_safe: true
                     _locked: false
+                    _sort_keys: true
                     _type_safe: true
                   box_matcher: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                    _allow_dotted_keys: false
                     _convert_dict: true
                     _fields:
                       class_path: vis4d.op.box.matchers.max_iou.MaxIoUMatcher
                       init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                        _allow_dotted_keys: false
                         _convert_dict: true
                         _fields:
                           allow_low_quality_matches: false
@@ -884,40 +1121,52 @@ _fields:
                           thresholds:
                           - 0.5
                         _locked: false
+                        _sort_keys: true
                         _type_safe: true
                     _locked: false
+                    _sort_keys: true
                     _type_safe: true
                   box_sampler: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                    _allow_dotted_keys: false
                     _convert_dict: true
                     _fields:
                       class_path: vis4d.op.box.samplers.random.RandomSampler
                       init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                        _allow_dotted_keys: false
                         _convert_dict: true
                         _fields:
                           batch_size: 512
                           positive_fraction: 0.25
                         _locked: false
+                        _sort_keys: true
                         _type_safe: true
                     _locked: false
+                    _sort_keys: true
                     _type_safe: true
                   num_classes: 8
                   roi_head: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                    _allow_dotted_keys: false
                     _convert_dict: true
                     _fields:
                       class_path: vis4d.op.detect.rcnn.RCNNHead
                       init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                        _allow_dotted_keys: false
                         _convert_dict: true
                         _fields:
                           num_classes: 8
                         _locked: false
+                        _sort_keys: true
                         _type_safe: true
                     _locked: false
+                    _sort_keys: true
                     _type_safe: true
                   rpn_box_decoder: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                    _allow_dotted_keys: false
                     _convert_dict: true
                     _fields:
                       class_path: vis4d.op.box.encoder.delta_xywh.DeltaXYWHBBoxDecoder
                       init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                        _allow_dotted_keys: false
                         _convert_dict: true
                         _fields:
                           target_means: !!python/tuple
@@ -931,32 +1180,42 @@ _fields:
                           - 1.0
                           - 1.0
                         _locked: false
+                        _sort_keys: true
                         _type_safe: true
                     _locked: false
+                    _sort_keys: true
                     _type_safe: true
                 _locked: false
+                _sort_keys: true
                 _type_safe: true
             _locked: false
+            _sort_keys: true
             _type_safe: true
           mask_head: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+            _allow_dotted_keys: false
             _convert_dict: true
             _fields:
               class_path: vis4d.op.detect.mask_rcnn.MaskRCNNHead
               init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                _allow_dotted_keys: false
                 _convert_dict: true
                 _fields:
                   num_classes: 8
                 _locked: false
+                _sort_keys: true
                 _type_safe: true
             _locked: false
+            _sort_keys: true
             _type_safe: true
           no_overlap: true
           num_classes: 8
           rcnn_box_decoder: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+            _allow_dotted_keys: false
             _convert_dict: true
             _fields:
               class_path: vis4d.op.box.encoder.delta_xywh.DeltaXYWHBBoxDecoder
               init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                _allow_dotted_keys: false
                 _convert_dict: true
                 _fields:
                   target_means: !!python/tuple
@@ -970,20 +1229,26 @@ _fields:
                   - 0.2
                   - 0.2
                 _locked: false
+                _sort_keys: true
                 _type_safe: true
             _locked: false
+            _sort_keys: true
             _type_safe: true
           weights: null
         _locked: false
+        _sort_keys: true
         _type_safe: true
     _locked: false
+    _sort_keys: true
     _type_safe: true
   optimizers:
   - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+    _allow_dotted_keys: false
     _convert_dict: true
     _fields:
       lr_schedulers:
       - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+        _allow_dotted_keys: false
         _convert_dict: true
         _fields:
           begin: 0
@@ -992,21 +1257,27 @@ _fields:
           end: 500
           epoch_based: false
           scheduler: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+            _allow_dotted_keys: false
             _convert_dict: true
             _fields:
               class_path: torch.optim.lr_scheduler.LinearLR
               init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                _allow_dotted_keys: false
                 _convert_dict: true
                 _fields:
                   start_factor: 0.001
                   total_iters: 500
                 _locked: false
+                _sort_keys: true
                 _type_safe: true
             _locked: false
+            _sort_keys: true
             _type_safe: true
         _locked: false
+        _sort_keys: true
         _type_safe: true
       - !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+        _allow_dotted_keys: false
         _convert_dict: true
         _fields:
           begin: 0
@@ -1015,10 +1286,12 @@ _fields:
           end: -1
           epoch_based: true
           scheduler: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+            _allow_dotted_keys: false
             _convert_dict: true
             _fields:
               class_path: torch.optim.lr_scheduler.MultiStepLR
               init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+                _allow_dotted_keys: false
                 _convert_dict: true
                 _fields:
                   gamma: 0.1
@@ -1026,30 +1299,39 @@ _fields:
                   - 24
                   - 33
                 _locked: false
+                _sort_keys: true
                 _type_safe: true
             _locked: false
+            _sort_keys: true
             _type_safe: true
         _locked: false
+        _sort_keys: true
         _type_safe: true
       optimizer: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+        _allow_dotted_keys: false
         _convert_dict: true
         _fields:
           class_path: torch.optim.sgd.SGD
           init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+            _allow_dotted_keys: false
             _convert_dict: true
             _fields:
               lr: 0.02
               momentum: 0.9
               weight_decay: 0.0001
             _locked: false
+            _sort_keys: true
             _type_safe: true
         _locked: false
+        _sort_keys: true
         _type_safe: true
       param_groups: null
     _locked: false
+    _sort_keys: true
     _type_safe: true
-  output_dir: vis4d-workspace/mask_rcnn_r50_3x_bdd100k/2024-08-21_16-35-33
+  output_dir: vis4d-workspace/mask_rcnn_r50_3x_bdd100k/2025-07-22_23-26-24
   params: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+    _allow_dotted_keys: false
     _convert_dict: true
     _fields:
       lr: 0.02
@@ -1058,9 +1340,11 @@ _fields:
       samples_per_gpu: 2
       workers_per_gpu: 2
     _locked: false
+    _sort_keys: true
     _type_safe: true
   pl_callbacks: []
   pl_trainer: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+    _allow_dotted_keys: false
     _convert_dict: true
     _fields:
       accelerator: auto
@@ -1091,6 +1375,7 @@ _fields:
       max_time: null
       min_epochs: null
       min_steps: null
+      model_registry: null
       num_nodes: 1
       num_sanity_val_steps: 0
       overfit_batches: 0.0
@@ -1102,41 +1387,51 @@ _fields:
       sync_batchnorm: false
       use_distributed_sampler: false
       val_check_interval: null
-      version: 2024-08-21_16-35-33
+      version: 2025-07-22_23-26-24
       wandb: false
       work_dir: vis4d-workspace
     _locked: false
+    _sort_keys: true
     _type_safe: true
   seed: -1
   test_data_connector: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+    _allow_dotted_keys: false
     _convert_dict: true
     _fields:
       class_path: vis4d.engine.connectors.base.DataConnector
       init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+        _allow_dotted_keys: false
         _convert_dict: true
         _fields:
           key_mapping: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+            _allow_dotted_keys: false
             _convert_dict: true
             _fields:
               images: images
               input_hw: input_hw
               original_hw: original_hw
             _locked: false
+            _sort_keys: true
             _type_safe: true
         _locked: false
+        _sort_keys: true
         _type_safe: true
     _locked: false
+    _sort_keys: true
     _type_safe: true
   tf32_matmul_precision: highest
-  timestamp: 2024-08-21_16-35-33
+  timestamp: 2025-07-22_23-26-24
   train_data_connector: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+    _allow_dotted_keys: false
     _convert_dict: true
     _fields:
       class_path: vis4d.engine.connectors.base.DataConnector
       init_args: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+        _allow_dotted_keys: false
         _convert_dict: true
         _fields:
           key_mapping: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
+            _allow_dotted_keys: false
             _convert_dict: true
             _fields:
               boxes2d: boxes2d
@@ -1144,13 +1439,17 @@ _fields:
               images: images
               input_hw: input_hw
             _locked: false
+            _sort_keys: true
             _type_safe: true
         _locked: false
+        _sort_keys: true
         _type_safe: true
     _locked: false
+    _sort_keys: true
     _type_safe: true
   use_tf32: false
-  version: 2024-08-21_16-35-33
+  version: 2025-07-22_23-26-24
   work_dir: vis4d-workspace
 _locked: false
+_sort_keys: true
 _type_safe: true
