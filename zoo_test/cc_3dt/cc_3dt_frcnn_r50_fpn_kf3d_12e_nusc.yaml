@@ -48,7 +48,7 @@ _fields:
             _locked: false
             _sort_keys: true
             _type_safe: true
-          output_dir: vis4d-workspace/cc_3dt_frcnn_r50_fpn_kf3d_12e_nusc/2025-07-22_23-26-25
+          output_dir: vis4d-workspace/cc_3dt_frcnn_r50_fpn_kf3d_12e_nusc/2025-08-05_03-04-50
           save_predictions: true
           test_connector: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
             _allow_dotted_keys: false
@@ -140,7 +140,7 @@ _fields:
             _locked: false
             _sort_keys: true
             _type_safe: true
-          output_dir: vis4d-workspace/cc_3dt_frcnn_r50_fpn_kf3d_12e_nusc/2025-07-22_23-26-25
+          output_dir: vis4d-workspace/cc_3dt_frcnn_r50_fpn_kf3d_12e_nusc/2025-08-05_03-04-50
           save_predictions: true
           test_connector: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
             _allow_dotted_keys: false
@@ -1465,7 +1465,7 @@ _fields:
     _locked: false
     _sort_keys: true
     _type_safe: true
-  output_dir: vis4d-workspace/cc_3dt_frcnn_r50_fpn_kf3d_12e_nusc/2025-07-22_23-26-25
+  output_dir: vis4d-workspace/cc_3dt_frcnn_r50_fpn_kf3d_12e_nusc/2025-08-05_03-04-50
   params: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
     _allow_dotted_keys: false
     _convert_dict: true
@@ -1522,7 +1522,7 @@ _fields:
       sync_batchnorm: false
       use_distributed_sampler: false
       val_check_interval: null
-      version: 2025-07-22_23-26-25
+      version: 2025-08-05_03-04-50
       wandb: false
       work_dir: vis4d-workspace
     _locked: false
@@ -1617,7 +1617,7 @@ _fields:
     _sort_keys: true
     _type_safe: true
   tf32_matmul_precision: highest
-  timestamp: 2025-07-22_23-26-25
+  timestamp: 2025-08-05_03-04-50
   train_data_connector: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
     _allow_dotted_keys: false
     _convert_dict: true
@@ -1649,7 +1649,7 @@ _fields:
     _sort_keys: true
     _type_safe: true
   use_tf32: false
-  version: 2025-07-22_23-26-25
+  version: 2025-08-05_03-04-50
   work_dir: vis4d-workspace
 _locked: false
 _sort_keys: true
