@@ -48,7 +48,7 @@ _fields:
             _locked: false
             _sort_keys: true
             _type_safe: true
-          output_dir: vis4d-workspace/cc_3dt_bevformer_base_velo_lstm_nusc/2025-08-05_03-04-50
+          output_dir: vis4d-workspace/cc_3dt_bevformer_base_velo_lstm_nusc/2025-08-05_12-17-04
           save_predictions: true
           test_connector: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
             _allow_dotted_keys: false
@@ -140,7 +140,7 @@ _fields:
             _locked: false
             _sort_keys: true
             _type_safe: true
-          output_dir: vis4d-workspace/cc_3dt_bevformer_base_velo_lstm_nusc/2025-08-05_03-04-50
+          output_dir: vis4d-workspace/cc_3dt_bevformer_base_velo_lstm_nusc/2025-08-05_12-17-04
           save_predictions: true
           test_connector: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
             _allow_dotted_keys: false
@@ -1013,7 +1013,7 @@ _fields:
                         _allow_dotted_keys: false
                         _convert_dict: true
                         _fields:
-                          weights: https://dl.cv.ethz.ch/vis4d/cc_3dt/velo_lstm_cc_3dt_frcnn_r101_fpn_100e_nusc_9526a7.pt
+                          weights: ''
                         _locked: false
                         _sort_keys: true
                         _type_safe: true
@@ -1165,7 +1165,7 @@ _fields:
     _locked: false
     _sort_keys: true
     _type_safe: true
-  output_dir: vis4d-workspace/cc_3dt_bevformer_base_velo_lstm_nusc/2025-08-05_03-04-50
+  output_dir: vis4d-workspace/cc_3dt_bevformer_base_velo_lstm_nusc/2025-08-05_12-17-04
   params: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
     _allow_dotted_keys: false
     _convert_dict: true
@@ -1222,7 +1222,7 @@ _fields:
       sync_batchnorm: false
       use_distributed_sampler: false
       val_check_interval: null
-      version: 2025-08-05_03-04-50
+      version: 2025-08-05_12-17-04
       wandb: false
       work_dir: vis4d-workspace
     _locked: false
@@ -1362,7 +1362,7 @@ _fields:
     _sort_keys: true
     _type_safe: true
   tf32_matmul_precision: highest
-  timestamp: 2025-08-05_03-04-50
+  timestamp: 2025-08-05_12-17-04
   train_data_connector: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
     _allow_dotted_keys: false
     _convert_dict: true
@@ -1394,8 +1394,8 @@ _fields:
     _sort_keys: true
     _type_safe: true
   use_tf32: false
-  velo_lstm_ckpt: https://dl.cv.ethz.ch/vis4d/cc_3dt/velo_lstm_cc_3dt_frcnn_r101_fpn_100e_nusc_9526a7.pt
-  version: 2025-08-05_03-04-50
+  velo_lstm_ckpt: ''
+  version: 2025-08-05_12-17-04
   work_dir: vis4d-workspace
 _locked: false
 _sort_keys: true
