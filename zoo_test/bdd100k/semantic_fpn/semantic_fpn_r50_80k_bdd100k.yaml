@@ -101,7 +101,7 @@ _fields:
         _allow_dotted_keys: false
         _convert_dict: true
         _fields:
-          output_dir: vis4d-workspace/semantic_fpn_r50_80k_bdd100k/2025-08-05_03-04-50
+          output_dir: vis4d-workspace/semantic_fpn_r50_80k_bdd100k/2025-08-12_17-22-34
           test_connector: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
             _allow_dotted_keys: false
             _convert_dict: true
@@ -836,7 +836,7 @@ _fields:
     _locked: false
     _sort_keys: true
     _type_safe: true
-  output_dir: vis4d-workspace/semantic_fpn_r50_80k_bdd100k/2025-08-05_03-04-50
+  output_dir: vis4d-workspace/semantic_fpn_r50_80k_bdd100k/2025-08-12_17-22-34
   params: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
     _allow_dotted_keys: false
     _convert_dict: true
@@ -849,7 +849,6 @@ _fields:
     _locked: false
     _sort_keys: true
     _type_safe: true
-  pl_callbacks: []
   pl_trainer: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
     _allow_dotted_keys: false
     _convert_dict: true
@@ -895,7 +894,7 @@ _fields:
       sync_batchnorm: true
       use_distributed_sampler: false
       val_check_interval: 4000
-      version: 2025-08-05_03-04-50
+      version: 2025-08-12_17-22-34
       wandb: false
       work_dir: vis4d-workspace
     _locked: false
@@ -928,7 +927,7 @@ _fields:
     _sort_keys: true
     _type_safe: true
   tf32_matmul_precision: highest
-  timestamp: 2025-08-05_03-04-50
+  timestamp: 2025-08-12_17-22-34
   train_data_connector: !!python/object:ml_collections.config_dict.config_dict.ConfigDict
     _allow_dotted_keys: false
     _convert_dict: true
@@ -954,7 +953,7 @@ _fields:
     _type_safe: true
   use_tf32: false
   val_check_interval: 4000
-  version: 2025-08-05_03-04-50
+  version: 2025-08-12_17-22-34
   work_dir: vis4d-workspace
 _locked: false
 _sort_keys: true
